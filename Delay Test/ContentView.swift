@@ -12,10 +12,11 @@ struct ContentView: View {
     @ObservedResults(DTLog.self) var logs
     
     @State private var testFileSize = FileSize.zero
-    @State private var testInterval = TestInterval.tenSeconds
+    @State private var testInterval = TestInterval.thirtySeconds
     @State private var stasticalMethod = StatisticalMethod.frequency
     
     @State private var result = NSLocalizedString("Not test yet.", comment: "")
+    @State private var resultColor = Color.green
     @State private var timer:Timer? = nil
     
     @State private var restTime:TimeInterval = 0
@@ -35,15 +36,26 @@ struct ContentView: View {
                         ForEach(FileSize.allCases) { fileSize in
                             Text(fileSize.localizedString).tag(fileSize)
                         }
+                    }.onChange(of: testFileSize) { _ in
+                        if timer != nil {
+                            restart()
+                        }
                     }
-                    Picker("Test Interval", selection: $testInterval) {
+                    
+                    Picker("Test Intervals", selection: $testInterval) {
                         ForEach(TestInterval.allCases) { testInterval in
                             Text(testInterval.localizedString).tag(testInterval)
+                        }
+                    }.onChange(of: testInterval) { _ in
+                        if timer != nil {
+                            restart()
                         }
                     }
                     
                     Button {
-                        
+                        if let vc = NSStoryboard(name: "Support", bundle: nil).instantiateInitialController() as? NSViewController {
+                            NSApp.mainWindow?.contentViewController?.presentAsModalWindow(vc)
+                        }
                     } label: {
                         Image(nsImage: NSImage(named: "AppIcon")!)
                             .resizable()
@@ -58,28 +70,22 @@ struct ContentView: View {
                     Button {
                         instantTest()
                         start()
-                        updateCounterDown()
-                        startButtonDiabled.toggle()
-                        stopButtonDisabled.toggle()
                     } label: {
                         Label("Start", systemImage: "play.fill")
                     }.disabled(startButtonDiabled)
                     
                     Button {
                         stop()
-                        startButtonDiabled.toggle()
-                        stopButtonDisabled.toggle()
                     } label: {
                         Label("Stop", systemImage: "stop.fill")
-                            
                     }.disabled(stopButtonDisabled)
                     
                     Text(String(Int(restTime)))
                         .font(Font.custom("Big Caslon", fixedSize: 18))
                     
                     Text(result)
-                        .foregroundColor(.green)
-                    
+                        .foregroundColor(resultColor)
+
                     Spacer()
 
                     Button {
@@ -87,36 +93,42 @@ struct ContentView: View {
                     } label: {
                         Label("Clear", systemImage: "clear.fill")
                     }
-
                 }
                 
                 HStack {
                     Text("Statistics")
                         .font(.title)
                     
-                    Spacer(minLength: 250)
+                    Spacer()
                     
                     Picker("Method", selection: $stasticalMethod) {
                         ForEach(StatisticalMethod.allCases) { stasticalMethod in
                             Text(stasticalMethod.localizedString).tag(stasticalMethod)
                         }
-                    }
+                    }.frame(width: 200)
                 }
                 
                 let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 5)
                 
                 LazyVGrid(columns: columns) {
                     ForEach([10], id: \.self) { _ in
-                        Text("Count")
+                        Text("Last")
                         Text("Good in")
                         Text("Longest DT") // "Longest Disconnection Time"
                         Text("Average DT") // "Average Disconnection Time"
                         Text("Total DT") // "Total Disconnection Time"
                     }
                 }
-
-                ForEach([10, 30, 50, 100, 500, 1000, 5000], id: \.self) {
-                    StatisticItemSwiftUIView(transit: .constant(getTransit($0)))
+                
+                switch stasticalMethod {
+                case .frequency:
+                    ForEach([10, 30, 50, 100, 500, 1000, 5000], id: \.self) {
+                        FrequencyStatisticItemSwiftUIView(frequencyStaticstics: .constant(getFrequencyStaticstics($0)))
+                    }
+                case .duration:
+                    ForEach([1,5,10,15,30,60,180,360,480,720,1440], id: \.self) {
+                        DrurationStaticsticsSwiftUIView(durationStatistics: .constant(getDurationStaticstics($0)))
+                    }
                 }
                 
             }
@@ -136,10 +148,12 @@ struct ContentView: View {
         let delay = Int((endTime - startTime) * 1000)
         
         if (response as! HTTPURLResponse).statusCode == 200 {
-            result = NSLocalizedString("Good in \(delay)ms.", comment: "")
+            result = String.localizedStringWithFormat(NSLocalizedString("Good in %dms.", comment: ""), delay)
+            resultColor = .green
             add(with: delay)
         } else {
-            result = NSLocalizedString("Failed in \(delay)ms.", comment: "")
+            result = String.localizedStringWithFormat(NSLocalizedString("Failed in %dms.", comment: ""), delay)
+            resultColor = .red
             add(with: -delay)
         }
     }
@@ -165,12 +179,26 @@ struct ContentView: View {
             restTime = TimeInterval(testInterval.rawValue)
             instantTest()
         })
+        
+        updateCounterDown()
+        startButtonDiabled.toggle()
+        stopButtonDisabled.toggle()
     }
     
     private func stop() {
         restTime = 0
         timer?.invalidate()
         updateTimer?.invalidate()
+        
+        startButtonDiabled.toggle()
+        stopButtonDisabled.toggle()
+    }
+    
+    private func restart() {
+        stop()
+        
+        instantTest()
+        start()
     }
     
     private func instantTest() {
@@ -180,6 +208,7 @@ struct ContentView: View {
             } catch let error {
                 print("\(error)")
                 result = "Time out."
+                resultColor = .red
                 add(with: -1)
             }
         }
@@ -210,18 +239,38 @@ struct ContentView: View {
         }
     }
     
-    private func getTransit(_ count:Int) -> Transit {
+    private func getFrequencyStaticstics(_ count:Int) -> FrequencyStaticstics {
         let min = min(logs.count, count)
         let disconnectedTimePoints = updateDisconnectedTimePoints(in: min)
         
-        return Transit(count: min,
+        return FrequencyStaticstics(count: min,
                        max: count,
                        disconnectedTimePoints: disconnectedTimePoints)
     }
     
+    private func getDurationStaticstics(_ timeLength:Int) -> DurationStaticstics {
+        let disconnectedTimePoints = updateDisconnectedTimePoints(withIn: timeLength)
+        
+        return DurationStaticstics(timeLength: timeLength,
+                                   disconnectedTimePoints: disconnectedTimePoints)
+    }
+    
     private func updateDisconnectedTimePoints(in count:Int) -> [DisconnectedTimePoint] {
+//        let logs = logs.sorted(byKeyPath: "startTime", ascending: false)[0..<count]
         let logs = logs.sorted(byKeyPath: "startTime", ascending: false)[0..<count]
 
+        return updateDisconnectedTimePoints(with:logs)
+    }
+    
+    private func updateDisconnectedTimePoints(withIn timeLength:Int) -> [DisconnectedTimePoint] {
+        let now = Date()
+        let date = Date(timeInterval: -Double(timeLength * 60), since: now) as NSDate
+        let logs = logs.filter(NSPredicate(format: "startTime>%@", date))
+        
+        return updateDisconnectedTimePoints(with:logs[0..<logs.count])
+    }
+    
+    private func updateDisconnectedTimePoints(with logs:Slice<Results<DTLog>>) -> [DisconnectedTimePoint] {
         // get disconnectedTimePoints
         var disconnectedTimePoints = [DisconnectedTimePoint]()
         var disconnectedTimePoint:DisconnectedTimePoint? = nil

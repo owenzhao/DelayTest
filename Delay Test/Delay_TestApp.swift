@@ -12,6 +12,7 @@ struct Delay_TestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .navigationTitle(NSLocalizedString("Delay Test", comment: ""))
         }
     }
 }

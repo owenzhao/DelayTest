@@ -1,0 +1,88 @@
+/* No comment provided by engineer. */
+"%d hours" = "%d小时";
+
+/* No comment provided by engineer. */
+"%d minutes" = "%d分";
+
+/* No comment provided by engineer. */
+"0B" = "0B";
+
+/* No comment provided by engineer. */
+"1B" = "1B";
+
+/* No comment provided by engineer. */
+"1KB" = "1KB";
+
+/* No comment provided by engineer. */
+"1m" = "1分钟";
+
+/* No comment provided by engineer. */
+"5m" = "5分钟";
+
+/* No comment provided by engineer. */
+"10KB" = "10KB";
+
+/* No comment provided by engineer. */
+"10m" = "10分钟";
+
+/* No comment provided by engineer. */
+"10s" = "10秒";
+
+/* No comment provided by engineer. */
+"30s" = "30秒";
+
+/* No comment provided by engineer. */
+"100KB" = "100KB";
+
+/* No comment provided by engineer. */
+"Average DT" = "平均断线时间";
+
+/* No comment provided by engineer. */
+"Clear" = "归零";
+
+/* No comment provided by engineer. */
+"Duration" = "时长";
+
+/* No comment provided by engineer. */
+"Failed in %dms." = "连接失败，用时%dms。";
+
+/* No comment provided by engineer. */
+"Frequency" = "次数";
+
+/* No comment provided by engineer. */
+"Good in" = "通过率";
+
+/* No comment provided by engineer. */
+"Good in %dms." = "连接成功，用时%dms。";
+
+/* No comment provided by engineer. */
+"Last" = "最后";
+
+/* No comment provided by engineer. */
+"Longest DT" = "最长断线时间";
+
+/* No comment provided by engineer. */
+"Method" = "方法";
+
+/* No comment provided by engineer. */
+"Not test yet." = "还没测试。";
+
+/* No comment provided by engineer. */
+"Start" = "开始";
+
+/* No comment provided by engineer. */
+"Statistics" = "统计";
+
+/* No comment provided by engineer. */
+"Stop" = "停止";
+
+/* No comment provided by engineer. */
+"Test File" = "测试文件";
+
+/* No comment provided by engineer. */
+"Test Intervals" = "测试间隔";
+
+/* No comment provided by engineer. */
+"Total DT" = "总断线时间";
+
+"Delay Test" = "延迟测试";
