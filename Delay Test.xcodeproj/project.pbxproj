@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2F1ACB1F6CED398F46148F /* Pods_Delay_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05FA40D3E23EF4AA092EA443 /* Pods_Delay_Test.framework */; };
 		DC1834A9276FB1B500D906BC /* Delay_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1834A8276FB1B500D906BC /* Delay_TestApp.swift */; };
 		DC1834AB276FB1B500D906BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1834AA276FB1B500D906BC /* ContentView.swift */; };
 		DC1834AD276FB1B700D906BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1834AC276FB1B700D906BC /* Assets.xcassets */; };
 		DC1834B0276FB1B700D906BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */; };
+		DC2CCA6B2772ADCF00558B4F /* StatisticItemSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6A2772ADCF00558B4F /* StatisticItemSwiftUIView.swift */; };
+		DC2CCA6D2772ADE100558B4F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6C2772ADE100558B4F /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05FA40D3E23EF4AA092EA443 /* Pods_Delay_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delay_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A200E25CEE696863C16F2FE7 /* Pods-Delay Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay Test.release.xcconfig"; path = "Target Support Files/Pods-Delay Test/Pods-Delay Test.release.xcconfig"; sourceTree = "<group>"; };
 		DC1834A5276FB1B500D906BC /* Delay Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delay Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1834A8276FB1B500D906BC /* Delay_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay_TestApp.swift; sourceTree = "<group>"; };
 		DC1834AA276FB1B500D906BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC1834AC276FB1B700D906BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC1834B1276FB1B700D906BC /* Delay_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delay_Test.entitlements; sourceTree = "<group>"; };
+		DC2CCA6A2772ADCF00558B4F /* StatisticItemSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticItemSwiftUIView.swift; sourceTree = "<group>"; };
+		DC2CCA6C2772ADE100558B4F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FAC5E4280508DF8A4E928D6C /* Pods-Delay Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay Test.debug.xcconfig"; path = "Target Support Files/Pods-Delay Test/Pods-Delay Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2F1ACB1F6CED398F46148F /* Pods_Delay_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91D05E4747337D71AE1A767F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05FA40D3E23EF4AA092EA443 /* Pods_Delay_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9AAAF6C782405CD062E5962 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAC5E4280508DF8A4E928D6C /* Pods-Delay Test.debug.xcconfig */,
+				A200E25CEE696863C16F2FE7 /* Pods-Delay Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DC18349C276FB1B500D906BC = {
 			isa = PBXGroup;
 			children = (
 				DC1834A7276FB1B500D906BC /* Delay Test */,
 				DC1834A6276FB1B500D906BC /* Products */,
+				B9AAAF6C782405CD062E5962 /* Pods */,
+				91D05E4747337D71AE1A767F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +82,8 @@
 			children = (
 				DC1834A8276FB1B500D906BC /* Delay_TestApp.swift */,
 				DC1834AA276FB1B500D906BC /* ContentView.swift */,
+				DC2CCA6A2772ADCF00558B4F /* StatisticItemSwiftUIView.swift */,
+				DC2CCA6C2772ADE100558B4F /* Model.swift */,
 				DC1834AC276FB1B700D906BC /* Assets.xcassets */,
 				DC1834B1276FB1B700D906BC /* Delay_Test.entitlements */,
 				DC1834AE276FB1B700D906BC /* Preview Content */,
@@ -76,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC1834B4276FB1B700D906BC /* Build configuration list for PBXNativeTarget "Delay Test" */;
 			buildPhases = (
+				7DD06ABFF2EDA60EBE2B5283 /* [CP] Check Pods Manifest.lock */,
 				DC1834A1276FB1B500D906BC /* Sources */,
 				DC1834A2276FB1B500D906BC /* Frameworks */,
 				DC1834A3276FB1B500D906BC /* Resources */,
+				90D6C054F452349C5AF15759 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,13 +166,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7DD06ABFF2EDA60EBE2B5283 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delay Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90D6C054F452349C5AF15759 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC1834A1276FB1B500D906BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC2CCA6B2772ADCF00558B4F /* StatisticItemSwiftUIView.swift in Sources */,
 				DC1834AB276FB1B500D906BC /* ContentView.swift in Sources */,
 				DC1834A9276FB1B500D906BC /* Delay_TestApp.swift in Sources */,
+				DC2CCA6D2772ADE100558B4F /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +340,7 @@
 		};
 		DC1834B5276FB1B700D906BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAC5E4280508DF8A4E928D6C /* Pods-Delay Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,6 +368,7 @@
 		};
 		DC1834B6276FB1B700D906BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A200E25CEE696863C16F2FE7 /* Pods-Delay Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

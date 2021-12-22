@@ -1,51 +1,61 @@
 {
   "images" : [
     {
+      "filename" : "snail-slimeMacMicro_16pt.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "snail-slimeMacMicro_16pt@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "snail-slimeMacSmall_32pt.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "snail-slimeMacSmall_32pt@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
+      "filename" : "snail-slimeMacMedium_128pt.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
+      "filename" : "snail-slimeMacMedium_128pt@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
+      "filename" : "snail-slimeMacLarge_256pt.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
+      "filename" : "snail-slimeMacLarge_256pt@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
+      "filename" : "snail-slimeMacHuge_512pt.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
+      "filename" : "snail-slimeMacHuge_512pt@2x.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
