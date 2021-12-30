@@ -7,18 +7,21 @@
 
 import Foundation
 import RealmSwift
+import SwiftUI
 
 class DTLog:Object, ObjectKeyIdentifiable {
+    static let newLog = Notification.Name("newLog")
+    
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var startTime = Date()
-    @Persisted var interval = 0 // Test Intervals
+    @Persisted var interval = 0
     @Persisted var connected = true
     @Persisted var delay = 0
 }
 
 struct DisconnectedTimePoint {
     var startTime:Date
-    var timeLength:Int // in minutes
+    var timeLength:Int
 }
 
 struct FrequencyStaticstics:StaticsticsMethodHelper {
@@ -73,19 +76,19 @@ extension StaticsticsMethodHelper {
     func getLDT() -> Int { // in seconds
         let LDT = disconnectedTimePoints.max(by: { $0.timeLength < $1.timeLength })?.timeLength ?? 0
         
-        return LDT
+        return Int(LDT)
     }
     
     func getADT() -> Int {
-        let ADT:Double = {
+        let ADT:Int = {
             if disconnectedTimePoints.isEmpty {
                 return 0
             } else {
-                return Double(getTDT()) / Double(disconnectedTimePoints.count)
+                return getTDT() / disconnectedTimePoints.count
             }
         }()
         
-        return Int(ADT)
+        return ADT
     }
     
     func getTDT() -> Int {
@@ -95,4 +98,9 @@ extension StaticsticsMethodHelper {
 
         return TDT
     }
+}
+
+struct DTResult {
+    var string:String = NSLocalizedString("Not test yet.", comment: "")
+    var color:Color = .green
 }

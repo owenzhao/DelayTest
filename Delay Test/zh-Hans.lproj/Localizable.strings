@@ -35,13 +35,34 @@
 "100KB" = "100KB";
 
 /* No comment provided by engineer. */
+"About" = "关于";
+
+/* No comment provided by engineer. */
+"Auto Launch." = "自动启动。";
+
+/* No comment provided by engineer. */
 "Average DT" = "平均断线时间";
+
+/* No comment provided by engineer. */
+"Black" = "黑";
+
+/* No comment provided by engineer. */
+"Blue" = "蓝";
 
 /* No comment provided by engineer. */
 "Clear" = "归零";
 
 /* No comment provided by engineer. */
+"Connection timed out." = "连接超时。";
+
+/* No comment provided by engineer. */
+"Delay Test" = "延迟测试";
+
+/* No comment provided by engineer. */
 "Duration" = "时长";
+
+/* No comment provided by engineer. */
+"Fail" = "失败";
 
 /* No comment provided by engineer. */
 "Failed in %dms." = "连接失败，用时%dms。";
@@ -50,10 +71,25 @@
 "Frequency" = "次数";
 
 /* No comment provided by engineer. */
+"General" = "通用";
+
+/* No comment provided by engineer. */
+"Good" = "成功";
+
+/* No comment provided by engineer. */
 "Good in" = "通过率";
 
 /* No comment provided by engineer. */
 "Good in %dms." = "连接成功，用时%dms。";
+
+/* No comment provided by engineer. */
+"Gray" = "灰";
+
+/* No comment provided by engineer. */
+"Green" = "绿";
+
+/* No comment provided by engineer. */
+"Icon" = "图标";
 
 /* No comment provided by engineer. */
 "Last" = "最后";
@@ -65,13 +101,46 @@
 "Method" = "方法";
 
 /* No comment provided by engineer. */
+"Network Connected" = "网络已连接";
+
+/* No comment provided by engineer. */
 "Not test yet." = "还没测试。";
+
+/* No comment provided by engineer. */
+"Notify Once When Network Good" = "网络变好时通知一次";
+
+/* No comment provided by engineer. */
+"Orange" = "橙";
+
+/* No comment provided by engineer. */
+"Pink" = "粉";
+
+/* No comment provided by engineer. */
+"Preferences..." = "偏好设置…";
+
+/* No comment provided by engineer. */
+"Purple" = "紫";
+
+/* No comment provided by engineer. */
+"Quit" = "退出";
+
+/* No comment provided by engineer. */
+"Red" = "红";
+
+/* No comment provided by engineer. */
+"Run Immediately." = "立即运行。";
+
+/* No comment provided by engineer. */
+"Show As" = "显示为";
 
 /* No comment provided by engineer. */
 "Start" = "开始";
 
 /* No comment provided by engineer. */
 "Statistics" = "统计";
+
+/* No comment provided by engineer. */
+"Status Bar" = "状态栏";
 
 /* No comment provided by engineer. */
 "Stop" = "停止";
@@ -83,6 +152,17 @@
 "Test Intervals" = "测试间隔";
 
 /* No comment provided by engineer. */
+"Text" = "文本";
+
+/* No comment provided by engineer. */
 "Total DT" = "总断线时间";
 
-"Delay Test" = "延迟测试";
+/* No comment provided by engineer. */
+"When Login" = "当启动时";
+
+/* No comment provided by engineer. */
+"White" = "白";
+
+/* No comment provided by engineer. */
+"Yellow" = "黄";
+

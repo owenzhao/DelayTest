@@ -17,18 +17,46 @@
 		DC1834B0276FB1B700D906BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */; };
 		DC2CCA6B2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */; };
 		DC2CCA6D2772ADE100558B4F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6C2772ADE100558B4F /* Model.swift */; };
+		DC8DF2C4277C7F4F00D2F4F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8DF2C3277C7F4F00D2F4F3 /* AppDelegate.swift */; };
+		DC8DF2C6277C7F4F00D2F4F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8DF2C5277C7F4F00D2F4F3 /* ViewController.swift */; };
+		DC8DF2C8277C7F5100D2F4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8DF2C7277C7F5100D2F4F3 /* Assets.xcassets */; };
+		DC8DF2CB277C7F5100D2F4F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8DF2C9277C7F5100D2F4F3 /* Main.storyboard */; };
+		DC8DF2D3277DC4FB00D2F4F3 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = DC8DF2D2277DC4FB00D2F4F3 /* Defaults */; };
+		DC8DF2D5277DC62E00D2F4F3 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8DF2D4277DC62E00D2F4F3 /* SharedDefaults.swift */; };
+		DC8DF2D6277DC66400D2F4F3 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8DF2D4277DC62E00D2F4F3 /* SharedDefaults.swift */; };
+		DC8DF2D8277E04BD00D2F4F3 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8DF2D7277E04BD00D2F4F3 /* ServiceManagement.framework */; platformFilter = maccatalyst; };
+		DC8DF2DA277E053D00D2F4F3 /* Delay Test Launcher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC8DF2C1277C7F4F00D2F4F3 /* Delay Test Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC94B04D2777C07E00BEE246 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = DC94B04C2777C07E00BEE246 /* Preferences */; };
+		DC94B04F2777C0C700BEE246 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC94B04E2777C0C700BEE246 /* GeneralSettingsView.swift */; };
+		DCA1518E2778E0E400E2F1C6 /* StatusBarSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1518D2778E0E400E2F1C6 /* StatusBarSettingView.swift */; };
+		DCA151912779975A00E2F1C6 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = DCA151902779975A00E2F1C6 /* Defaults */; };
+		DCA1519327799DEB00E2F1C6 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1519227799DEB00E2F1C6 /* DefaultsKeys.swift */; };
 		DCA34A8B27739FC500E1F1A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA34A8D27739FC500E1F1A3 /* Localizable.strings */; };
 		DCA34A912773A0CC00E1F1A3 /* Delay Test-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA34A932773A0CC00E1F1A3 /* Delay Test-InfoPlist.strings */; };
 		DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */ = {isa = PBXBuildFile; productRef = DCA34A962773A32E00E1F1A3 /* MyAppStore */; };
 		DCA34AA12773A43C00E1F1A3 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA34AA02773A43C00E1F1A3 /* Support.storyboard */; };
+		DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4BCA277ADE1300F5EFF5 /* Service.swift */; };
+		DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC8DF2D9277E04F300D2F4F3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				DC8DF2DA277E053D00D2F4F3 /* Delay Test Launcher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05FA40D3E23EF4AA092EA443 /* Pods_Delay_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delay_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A200E25CEE696863C16F2FE7 /* Pods-Delay Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay Test.release.xcconfig"; path = "Target Support Files/Pods-Delay Test/Pods-Delay Test.release.xcconfig"; sourceTree = "<group>"; };
 		DC0074A02773215500134077 /* DurationStaticsticsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationStaticsticsSwiftUIView.swift; sourceTree = "<group>"; };
 		DC0074A527738D1600134077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		DC0074A727738D2500134077 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		DC0074A9277395C500134077 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		DC1834A5276FB1B500D906BC /* Delay Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delay Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1834A8276FB1B500D906BC /* Delay_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay_TestApp.swift; sourceTree = "<group>"; };
@@ -36,13 +64,29 @@
 		DC1834AC276FB1B700D906BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC1834B1276FB1B700D906BC /* Delay_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delay_Test.entitlements; sourceTree = "<group>"; };
+		DC2957CC277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay Test-InfoPlist.strings"; sourceTree = "<group>"; };
+		DC2957CD277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DC2957CE277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyStatisticItemSwiftUIView.swift; sourceTree = "<group>"; };
 		DC2CCA6C2772ADE100558B4F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DC8DF2C1277C7F4F00D2F4F3 /* Delay Test Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delay Test Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8DF2C3277C7F4F00D2F4F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC8DF2C5277C7F4F00D2F4F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC8DF2C7277C7F5100D2F4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC8DF2CA277C7F5100D2F4F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC8DF2CC277C7F5100D2F4F3 /* Delay_Test_Launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delay_Test_Launcher.entitlements; sourceTree = "<group>"; };
+		DC8DF2D0277DBD4D00D2F4F3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		DC8DF2D4277DC62E00D2F4F3 /* SharedDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDefaults.swift; sourceTree = "<group>"; };
+		DC8DF2D7277E04BD00D2F4F3 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		DC8DF2DB277E059000D2F4F3 /* Delay-Test-Launcher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Delay-Test-Launcher-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DC94B04E2777C0C700BEE246 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+		DCA1518D2778E0E400E2F1C6 /* StatusBarSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarSettingView.swift; sourceTree = "<group>"; };
+		DCA1519227799DEB00E2F1C6 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		DCA34A8C27739FC500E1F1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DCA34A8E27739FC900E1F1A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DCA34A922773A0CC00E1F1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Delay Test-InfoPlist.strings"; sourceTree = "<group>"; };
-		DCA34A942773A0E400E1F1A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay Test-InfoPlist.strings"; sourceTree = "<group>"; };
 		DCA34AA02773A43C00E1F1A3 /* Support.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
+		DCCD4BCA277ADE1300F5EFF5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseRightClickView.swift; sourceTree = "<group>"; };
 		FAC5E4280508DF8A4E928D6C /* Pods-Delay Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay Test.debug.xcconfig"; path = "Target Support Files/Pods-Delay Test/Pods-Delay Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,8 +95,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA151912779975A00E2F1C6 /* Defaults in Frameworks */,
 				DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */,
+				DC8DF2D8277E04BD00D2F4F3 /* ServiceManagement.framework in Frameworks */,
+				DC94B04D2777C07E00BEE246 /* Preferences in Frameworks */,
 				7B2F1ACB1F6CED398F46148F /* Pods_Delay_Test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8DF2BE277C7F4F00D2F4F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8DF2D3277DC4FB00D2F4F3 /* Defaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +117,7 @@
 		91D05E4747337D71AE1A767F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC8DF2D7277E04BD00D2F4F3 /* ServiceManagement.framework */,
 				05FA40D3E23EF4AA092EA443 /* Pods_Delay_Test.framework */,
 			);
 			name = Frameworks;
@@ -80,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				DC1834A7276FB1B500D906BC /* Delay Test */,
+				DC8DF2C2277C7F4F00D2F4F3 /* Delay Test Launcher */,
 				DC1834A6276FB1B500D906BC /* Products */,
 				B9AAAF6C782405CD062E5962 /* Pods */,
 				91D05E4747337D71AE1A767F /* Frameworks */,
@@ -90,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DC1834A5276FB1B500D906BC /* Delay Test.app */,
+				DC8DF2C1277C7F4F00D2F4F3 /* Delay Test Launcher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,14 +157,14 @@
 			children = (
 				DCA34AA02773A43C00E1F1A3 /* Support.storyboard */,
 				DC1834A8276FB1B500D906BC /* Delay_TestApp.swift */,
-				DC1834AA276FB1B500D906BC /* ContentView.swift */,
+				DCCD4BCD277AFCCF00F5EFF5 /* Service */,
+				DCCD4BCE277AFCDE00F5EFF5 /* Views */,
+				DCCD4BCF277AFD1900F5EFF5 /* Model */,
+				DCCD4BCC277AFCB100F5EFF5 /* Preferences */,
 				DC0074A9277395C500134077 /* URLSession+Extension.swift */,
-				DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */,
-				DC0074A02773215500134077 /* DurationStaticsticsSwiftUIView.swift */,
 				DCA34A932773A0CC00E1F1A3 /* Delay Test-InfoPlist.strings */,
 				DCA34A8D27739FC500E1F1A3 /* Localizable.strings */,
 				DC0074A627738D1600134077 /* Localizable.stringsdict */,
-				DC2CCA6C2772ADE100558B4F /* Model.swift */,
 				DC1834AC276FB1B700D906BC /* Assets.xcassets */,
 				DC1834B1276FB1B700D906BC /* Delay_Test.entitlements */,
 				DC1834AE276FB1B700D906BC /* Preview Content */,
@@ -122,6 +180,57 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DC8DF2C2277C7F4F00D2F4F3 /* Delay Test Launcher */ = {
+			isa = PBXGroup;
+			children = (
+				DC8DF2DB277E059000D2F4F3 /* Delay-Test-Launcher-Info.plist */,
+				DC8DF2C3277C7F4F00D2F4F3 /* AppDelegate.swift */,
+				DC8DF2C5277C7F4F00D2F4F3 /* ViewController.swift */,
+				DC8DF2C7277C7F5100D2F4F3 /* Assets.xcassets */,
+				DC8DF2C9277C7F5100D2F4F3 /* Main.storyboard */,
+				DC8DF2CC277C7F5100D2F4F3 /* Delay_Test_Launcher.entitlements */,
+			);
+			path = "Delay Test Launcher";
+			sourceTree = "<group>";
+		};
+		DCCD4BCC277AFCB100F5EFF5 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				DCA1519227799DEB00E2F1C6 /* DefaultsKeys.swift */,
+				DC8DF2D4277DC62E00D2F4F3 /* SharedDefaults.swift */,
+				DC94B04E2777C0C700BEE246 /* GeneralSettingsView.swift */,
+				DCA1518D2778E0E400E2F1C6 /* StatusBarSettingView.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		DCCD4BCD277AFCCF00F5EFF5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DCCD4BCA277ADE1300F5EFF5 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DCCD4BCE277AFCDE00F5EFF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */,
+				DC0074A02773215500134077 /* DurationStaticsticsSwiftUIView.swift */,
+				DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */,
+				DC1834AA276FB1B500D906BC /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DCCD4BCF277AFD1900F5EFF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC2CCA6C2772ADE100558B4F /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +243,7 @@
 				DC1834A2276FB1B500D906BC /* Frameworks */,
 				DC1834A3276FB1B500D906BC /* Resources */,
 				90D6C054F452349C5AF15759 /* [CP] Embed Pods Frameworks */,
+				DC8DF2D9277E04F300D2F4F3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -142,9 +252,31 @@
 			name = "Delay Test";
 			packageProductDependencies = (
 				DCA34A962773A32E00E1F1A3 /* MyAppStore */,
+				DC94B04C2777C07E00BEE246 /* Preferences */,
+				DCA151902779975A00E2F1C6 /* Defaults */,
 			);
 			productName = "Delay Test";
 			productReference = DC1834A5276FB1B500D906BC /* Delay Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC8DF2C0277C7F4F00D2F4F3 /* Delay Test Launcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8DF2CF277C7F5100D2F4F3 /* Build configuration list for PBXNativeTarget "Delay Test Launcher" */;
+			buildPhases = (
+				DC8DF2BD277C7F4F00D2F4F3 /* Sources */,
+				DC8DF2BE277C7F4F00D2F4F3 /* Frameworks */,
+				DC8DF2BF277C7F4F00D2F4F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Delay Test Launcher";
+			packageProductDependencies = (
+				DC8DF2D2277DC4FB00D2F4F3 /* Defaults */,
+			);
+			productName = "Delay Test Launcher";
+			productReference = DC8DF2C1277C7F4F00D2F4F3 /* Delay Test Launcher.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,6 +292,9 @@
 					DC1834A4276FB1B500D906BC = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
+					DC8DF2C0277C7F4F00D2F4F3 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 				};
 			};
 			buildConfigurationList = DC1834A0276FB1B500D906BC /* Build configuration list for PBXProject "Delay Test" */;
@@ -168,18 +303,21 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				"zh-Hans",
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = DC18349C276FB1B500D906BC;
 			packageReferences = (
 				DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */,
+				DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */,
+				DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */,
 			);
 			productRefGroup = DC1834A6276FB1B500D906BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DC1834A4276FB1B500D906BC /* Delay Test */,
+				DC8DF2C0277C7F4F00D2F4F3 /* Delay Test Launcher */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +333,15 @@
 				DCA34A912773A0CC00E1F1A3 /* Delay Test-InfoPlist.strings in Resources */,
 				DCA34AA12773A43C00E1F1A3 /* Support.storyboard in Resources */,
 				DC1834AD276FB1B700D906BC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8DF2BF277C7F4F00D2F4F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8DF2C8277C7F5100D2F4F3 /* Assets.xcassets in Resources */,
+				DC8DF2CB277C7F5100D2F4F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,11 +395,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC2CCA6B2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift in Sources */,
+				DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */,
+				DC8DF2D5277DC62E00D2F4F3 /* SharedDefaults.swift in Sources */,
 				DC0074A12773215500134077 /* DurationStaticsticsSwiftUIView.swift in Sources */,
 				DC0074AA277395C500134077 /* URLSession+Extension.swift in Sources */,
+				DCA1518E2778E0E400E2F1C6 /* StatusBarSettingView.swift in Sources */,
+				DCA1519327799DEB00E2F1C6 /* DefaultsKeys.swift in Sources */,
 				DC1834AB276FB1B500D906BC /* ContentView.swift in Sources */,
 				DC1834A9276FB1B500D906BC /* Delay_TestApp.swift in Sources */,
+				DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */,
+				DC94B04F2777C0C700BEE246 /* GeneralSettingsView.swift in Sources */,
 				DC2CCA6D2772ADE100558B4F /* Model.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8DF2BD277C7F4F00D2F4F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8DF2C6277C7F4F00D2F4F3 /* ViewController.swift in Sources */,
+				DC8DF2C4277C7F4F00D2F4F3 /* AppDelegate.swift in Sources */,
+				DC8DF2D6277DC66400D2F4F3 /* SharedDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,16 +426,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				DC0074A527738D1600134077 /* en */,
-				DC0074A727738D2500134077 /* zh-Hans */,
+				DC2957CE277A044200A8645B /* zh-Hans */,
 			);
 			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+		DC8DF2C9277C7F5100D2F4F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC8DF2CA277C7F5100D2F4F3 /* Base */,
+				DC8DF2D0277DBD4D00D2F4F3 /* zh-Hans */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		DCA34A8D27739FC500E1F1A3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DCA34A8C27739FC500E1F1A3 /* en */,
-				DCA34A8E27739FC900E1F1A3 /* zh-Hans */,
+				DC2957CD277A044200A8645B /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			path = "/Users/zhaoxin/com.parussoft/DelayTest/Delay Test";
@@ -282,7 +454,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA34A922773A0CC00E1F1A3 /* en */,
-				DCA34A942773A0E400E1F1A3 /* zh-Hans */,
+				DC2957CC277A044200A8645B /* zh-Hans */,
 			);
 			name = "Delay Test-InfoPlist.strings";
 			path = "/Users/zhaoxin/com.parussoft/DelayTest/Delay Test";
@@ -295,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -356,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -464,6 +638,66 @@
 			};
 			name = Release;
 		};
+		DC8DF2CD277C7F5100D2F4F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96NM39SGJ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Delay-Test-Launcher-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test-Launcher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DC8DF2CE277C7F5100D2F4F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96NM39SGJ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Delay-Test-Launcher-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test-Launcher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -485,9 +719,34 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DC8DF2CF277C7F5100D2F4F3 /* Build configuration list for PBXNativeTarget "Delay Test Launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8DF2CD277C7F5100D2F4F3 /* Debug */,
+				DC8DF2CE277C7F5100D2F4F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:sindresorhus/Preferences.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+		DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:sindresorhus/Defaults.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
 		DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/MyAppStore.git";
@@ -499,6 +758,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC8DF2D2277DC4FB00D2F4F3 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
+		DC94B04C2777C07E00BEE246 /* Preferences */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */;
+			productName = Preferences;
+		};
+		DCA151902779975A00E2F1C6 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
+		};
 		DCA34A962773A32E00E1F1A3 /* MyAppStore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */;
