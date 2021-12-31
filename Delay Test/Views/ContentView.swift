@@ -24,6 +24,8 @@ struct ContentView: View {
     @State private var restTime = 0
     @State private var result = DTResult()
     
+    @State private var isShown = true
+    
     @Default(.goodTextColor) private var goodTextColor
     @Default(.failTextColor) private var failTextColor
     
@@ -145,7 +147,7 @@ struct ContentView: View {
                 }
             }
             .onReceive(restTimePublisher) { notification in
-                if let restTime = notification.userInfo?["restTime"] as? Int {
+                if isShown, let restTime = notification.userInfo?["restTime"] as? Int {
                     self.restTime = restTime
                 }
             }
@@ -168,7 +170,16 @@ struct ContentView: View {
                         try await service.restart()
                     }
                 }
+                
+                isShown = true
             }
+            .onReceive(NotificationCenter.default.publisher(for: NSWindow.didMiniaturizeNotification, object: window), perform: { notification in
+                isShown = false
+            })
+            .onReceive(NotificationCenter.default.publisher(for: NSWindow.didDeminiaturizeNotification, object: window), perform: { notification in
+                isShown = true
+            })
+            
             .toolbar {
                 Button {
                     windowOnTop.toggle()
