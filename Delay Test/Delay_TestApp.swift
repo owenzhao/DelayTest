@@ -14,7 +14,6 @@ import UserNotifications
 import RealmSwift
 import ServiceManagement
 
-// no changes in your AppDelegate class
 class AppDelegate: NSObject, NSApplicationDelegate {
     @Default(.startFromLauncher) private var startFromLauncher
     @Default(.launchWhenLogin) private var launchWhenLogin
@@ -48,6 +47,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillTerminate(_ notification: Notification) {
         unregisterNotification()
+        
+//    MARK: - Debug
 //        Defaults.reset(.startFromLauncher)
     }
     
@@ -194,13 +195,7 @@ extension AppDelegate {
         }
     }
     
-    func hide() {
-        removeFromDock()
-        NSApp.hide(nil)
-    }
-    
     private func unhide() {
-        showInDock()
         NSApp.unhide(nil)
     }
     
@@ -266,17 +261,6 @@ extension AppDelegate {
         
         return true
     }
-    
-//    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
-//        if NSApp.windows.contains(where: { (w) -> Bool in
-//            w.contentViewController is PostViewController2
-//        }) {
-//            NSSound.beep()
-//            return .terminateCancel
-//        }
-//
-//        return .terminateNow
-//    }
 }
 
 // MARK: -
@@ -285,23 +269,5 @@ extension AppDelegate:NSMenuDelegate {
         if let menuItem = menu.item(withTitle: NSLocalizedString("Notify Once When Network Good", comment: "")) {
             menuItem.state = (notifyOnceWhenNetworkGood == true) ? .on : .off
         }
-    }
-}
-
-extension AppDelegate {
-//    func applicationWillBecomeActive(_ notification: Notification) {
-//        checker?.sendNotification()
-//    }
-    
-    @objc func windowWillClose(_ noti:Notification) {
-        removeFromDock()
-    }
-    
-    private func showInDock() {
-        NSApp.setActivationPolicy(.regular)
-    }
-    
-    private func removeFromDock() {
-        NSApp.setActivationPolicy(.accessory)
     }
 }

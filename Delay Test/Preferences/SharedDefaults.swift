@@ -14,4 +14,6 @@ extension Defaults.Keys {
 //    MARK: - Shared
     static let launchWhenLogin = Key<Bool>("launchWhenLogin", default: true, suite: sharedDefaults)
     static let startFromLauncher = Key<Bool>("startFromLauncher", default: false, suite: sharedDefaults)
+//    MARK: - Debug
+//    static let startFromLauncher = Key<Bool>("startFromLauncher", default: true, suite: sharedDefaults)
 }

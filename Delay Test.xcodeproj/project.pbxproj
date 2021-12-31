@@ -15,6 +15,7 @@
 		DC1834AB276FB1B500D906BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1834AA276FB1B500D906BC /* ContentView.swift */; };
 		DC1834AD276FB1B700D906BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1834AC276FB1B700D906BC /* Assets.xcassets */; };
 		DC1834B0276FB1B700D906BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */; };
+		DC23D8B5277E6518000CF701 /* NSWindowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23D8B4277E6518000CF701 /* NSWindowDelegate.swift */; };
 		DC2CCA6B2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */; };
 		DC2CCA6D2772ADE100558B4F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6C2772ADE100558B4F /* Model.swift */; };
 		DC8DF2C4277C7F4F00D2F4F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8DF2C3277C7F4F00D2F4F3 /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		DC1834AC276FB1B700D906BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC1834B1276FB1B700D906BC /* Delay_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delay_Test.entitlements; sourceTree = "<group>"; };
+		DC23D8B4277E6518000CF701 /* NSWindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowDelegate.swift; sourceTree = "<group>"; };
 		DC2957CC277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay Test-InfoPlist.strings"; sourceTree = "<group>"; };
 		DC2957CD277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DC2957CE277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				DCCD4BCF277AFD1900F5EFF5 /* Model */,
 				DCCD4BCC277AFCB100F5EFF5 /* Preferences */,
 				DC0074A9277395C500134077 /* URLSession+Extension.swift */,
+				DC23D8B4277E6518000CF701 /* NSWindowDelegate.swift */,
 				DCA34A932773A0CC00E1F1A3 /* Delay Test-InfoPlist.strings */,
 				DCA34A8D27739FC500E1F1A3 /* Localizable.strings */,
 				DC0074A627738D1600134077 /* Localizable.stringsdict */,
@@ -405,6 +408,7 @@
 				DC1834A9276FB1B500D906BC /* Delay_TestApp.swift in Sources */,
 				DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */,
 				DC94B04F2777C0C700BEE246 /* GeneralSettingsView.swift in Sources */,
+				DC23D8B5277E6518000CF701 /* NSWindowDelegate.swift in Sources */,
 				DC2CCA6D2772ADE100558B4F /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

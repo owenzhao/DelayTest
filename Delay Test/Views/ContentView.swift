@@ -12,6 +12,8 @@ import Defaults
 struct ContentView: View {
     @Binding var service:SpeedTestService
     @ObservedResults(DTLog.self) var logs
+    @State private var window:NSWindow? = nil
+    private let windowDelegate = WindowDelegate()
     
     @Default(.startFromLauncher) private var startFromLauncher
     @Default(.testFileSize) private var testFileSize
@@ -149,12 +151,16 @@ struct ContentView: View {
             }
             .onAppear {
                 DispatchQueue.main.async { [self] in
-                    if startFromLauncher, let window = NSApp.keyWindow {
-                        startFromLauncher.toggle()
-                        window.miniaturize(self)
+                    if let window = NSApp.keyWindow {
+                        self.window = window
+                        window.delegate = windowDelegate
+                        
+                        if startFromLauncher {
+                            startFromLauncher.toggle()
+                            window.miniaturize(self)
+                        }
                     }
                 }
-                
                 
                 // MARK: Workaround for push result not sync
                 if startButtonDisabled {
