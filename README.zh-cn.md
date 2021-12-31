@@ -48,3 +48,15 @@
 显示主程序
 ### 网络变好时通知一次
 当此菜单被选中时，如果下一次的测试，网络通了，就会进行通知。通知后自动取消菜单的选中状态。如果网络不通，则菜单仍旧被选中。这样可以在网络通后，进行通知。并且不会有多余的干扰。
+
+## Icons
+下面是延迟测试中用到的图标。
+
+![snail-slime-w256](assets/snail-slime.png)
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/rabbixcons" title="Rabbixcons">Rabbixcons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+![snail-3-w256](assets/snail-3.png)
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
