@@ -92,7 +92,7 @@ struct ContentView: View {
                     .font(Font.custom("Big Caslon", fixedSize: 18))
                 
                 Text(result.string)
-                    .foregroundColor(result.color)
+                    .foregroundColor(.green)
                 
                 Spacer()
                 

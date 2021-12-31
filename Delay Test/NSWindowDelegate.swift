@@ -11,6 +11,10 @@ import SwiftUI
 
 class WindowDelegate:NSObject, NSWindowDelegate {
     func windowShouldClose(_ window: NSWindow) -> Bool {
+        if NSApp.orderedWindows.count > 1 {
+            return true
+        }
+        
         window.miniaturize(self)
         
         return false
