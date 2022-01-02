@@ -18,8 +18,8 @@ extension Defaults.Keys {
     static let statusBarStyle = Key<StatusBarStyle>("statusBarStyle", default: .icon)
     static let goodText = Key<String>("goodText", default: "Good")
     static let failText = Key<String>("failText", default: "Fail")
-    static let goodTextColor = Key<GoodColor>("goodColor", default: .green)
-    static let failTextColor = Key<FailColor>("failColor", default: .red)
+    static let goodTextColor = Key<GoodColor>("goodColor", default: .labelColor)
+    static let failTextColor = Key<FailColor>("failColor", default: .labelColor)
 //    MARK: - Status Bar Menu
     static let alwaysOnTop = Key<Bool>("alwaysOnTop", default: false)
     static let notifyOnceWhenNetworkGood = Key<Bool>("notifyOnceWhenNetworkGood", default: false)
