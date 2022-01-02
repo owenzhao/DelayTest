@@ -50,6 +50,9 @@
 "Blue" = "蓝";
 
 /* No comment provided by engineer. */
+"Brown" = "棕";
+
+/* No comment provided by engineer. */
 "Clear" = "归零";
 
 /* No comment provided by engineer. */
@@ -92,6 +95,12 @@
 "Icon" = "图标";
 
 /* No comment provided by engineer. */
+"Indigo" = "靛蓝";
+
+/* No comment provided by engineer. */
+"Label Color" = "标签色";
+
+/* No comment provided by engineer. */
 "Last" = "最后";
 
 /* No comment provided by engineer. */
@@ -122,6 +131,9 @@
 "Purple" = "紫";
 
 /* No comment provided by engineer. */
+"Quaternary Label Color" = "不重要的标签色";
+
+/* No comment provided by engineer. */
 "Quit" = "退出";
 
 /* No comment provided by engineer. */
@@ -129,6 +141,9 @@
 
 /* No comment provided by engineer. */
 "Run Immediately." = "立即运行。";
+
+/* No comment provided by engineer. */
+"Secondary Label Color" = "次要标签色";
 
 /* No comment provided by engineer. */
 "Show As" = "显示为";
@@ -144,6 +159,9 @@
 
 /* No comment provided by engineer. */
 "Stop" = "停止";
+
+/* No comment provided by engineer. */
+"Tertiary Label Color" = "第三重要标签色";
 
 /* No comment provided by engineer. */
 "Test File" = "测试文件";

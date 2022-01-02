@@ -95,9 +95,15 @@ enum GoodColor:String,CaseIterable,Identifiable, Defaults.Serializable {
         return self.rawValue
     }
     
-    case black, blue
+    case black, blue, brown
     case gray, green
+    case indigo
     case white
+    
+    case labelColor
+    case secondaryLabelColor
+    case tertiaryLabelColor
+    case quaternaryLabelColor
     
     var localizedString:String {
         switch self {
@@ -105,28 +111,56 @@ enum GoodColor:String,CaseIterable,Identifiable, Defaults.Serializable {
             return NSLocalizedString("Black", comment: "")
         case .blue:
             return NSLocalizedString("Blue", comment: "")
+        case .brown:
+            return NSLocalizedString("Brown", comment: "")
         case .gray:
             return NSLocalizedString("Gray", comment: "")
         case .green:
             return NSLocalizedString("Green", comment: "")
+        case .indigo:
+            return NSLocalizedString("Indigo", comment: "")
         case .white:
             return NSLocalizedString("White", comment: "")
+        case .labelColor:
+            return NSLocalizedString("Label Color", comment: "")
+        case .secondaryLabelColor:
+            return NSLocalizedString("Secondary Label Color", comment: "")
+        case .tertiaryLabelColor:
+            return NSLocalizedString("Tertiary Label Color", comment: "")
+        case .quaternaryLabelColor:
+            return NSLocalizedString("Quaternary Label Color", comment: "")
         }
     }
     
     var color:Color {
         switch self {
         case .black:
-            return .black
+            return blendedColor(.black)
         case .blue:
-            return .blue
+            return blendedColor(.systemBlue)
+        case .brown:
+            return blendedColor(.systemBrown)
         case .gray:
-            return .gray
+            return blendedColor(.systemGray)
         case .green:
-            return .green
+            return blendedColor(.systemGreen)
+        case .indigo:
+            return blendedColor(.systemIndigo)
         case .white:
-            return .white
+            return blendedColor(.white)
+        case .labelColor:
+            return Color(NSColor.labelColor)
+        case .secondaryLabelColor:
+            return Color(NSColor.secondaryLabelColor)
+        case .tertiaryLabelColor:
+            return Color(NSColor.tertiaryLabelColor)
+        case .quaternaryLabelColor:
+            return Color(NSColor.quaternaryLabelColor)
         }
+    }
+    
+    private func blendedColor(_ color:NSColor) -> Color {
+        return Color(NSColor.labelColor.blended(withFraction: 1.0, of: color)!)
     }
 }
 
@@ -141,6 +175,11 @@ enum FailColor:String,CaseIterable,Identifiable, Defaults.Serializable {
     case orange, pink, purple
     case red
     case white, yellow
+    
+    case labelColor
+    case secondaryLabelColor
+    case tertiaryLabelColor
+    case quaternaryLabelColor
     
     var localizedString:String {
         switch self {
@@ -158,26 +197,46 @@ enum FailColor:String,CaseIterable,Identifiable, Defaults.Serializable {
             return NSLocalizedString("White", comment: "")
         case .yellow:
             return NSLocalizedString("Yellow", comment: "")
+        case .labelColor:
+            return NSLocalizedString("Label Color", comment: "")
+        case .secondaryLabelColor:
+            return NSLocalizedString("Secondary Label Color", comment: "")
+        case .tertiaryLabelColor:
+            return NSLocalizedString("Tertiary Label Color", comment: "")
+        case .quaternaryLabelColor:
+            return NSLocalizedString("Quaternary Label Color", comment: "")
         }
     }
     
     var color:Color {
         switch self {
         case .black:
-            return .black
+            return blendedColor(.black)
         case .orange:
-            return .orange
+            return blendedColor(.systemOrange)
         case .pink:
-            return .pink
+            return blendedColor(.systemPink)
         case .purple:
-            return .purple
+            return blendedColor(.systemPurple)
         case .red:
-            return .red
+            return blendedColor(.systemRed)
         case .white:
-            return .white
+            return blendedColor(.white)
         case .yellow:
-            return .yellow
+            return blendedColor(.systemYellow)
+        case .labelColor:
+            return Color(NSColor.labelColor)
+        case .secondaryLabelColor:
+            return Color(NSColor.secondaryLabelColor)
+        case .tertiaryLabelColor:
+            return Color(NSColor.tertiaryLabelColor)
+        case .quaternaryLabelColor:
+            return Color(NSColor.quaternaryLabelColor)
         }
+    }
+    
+    private func blendedColor(_ color:NSColor) -> Color {
+        return Color(NSColor.labelColor.blended(withFraction: 1.0, of: color)!)
     }
 }
 

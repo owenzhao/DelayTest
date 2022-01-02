@@ -37,6 +37,7 @@
 		DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */ = {isa = PBXBuildFile; productRef = DCA34A962773A32E00E1F1A3 /* MyAppStore */; };
 		DCA34AA12773A43C00E1F1A3 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA34AA02773A43C00E1F1A3 /* Support.storyboard */; };
 		DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4BCA277ADE1300F5EFF5 /* Service.swift */; };
+		DCD6A9B027826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCD6A9AE27826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings */; };
 		DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,9 +67,6 @@
 		DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC1834B1276FB1B700D906BC /* Delay_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delay_Test.entitlements; sourceTree = "<group>"; };
 		DC23D8B4277E6518000CF701 /* NSWindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowDelegate.swift; sourceTree = "<group>"; };
-		DC2957CC277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay Test-InfoPlist.strings"; sourceTree = "<group>"; };
-		DC2957CD277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		DC2957CE277A044200A8645B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyStatisticItemSwiftUIView.swift; sourceTree = "<group>"; };
 		DC2CCA6C2772ADE100558B4F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DC8DF2C1277C7F4F00D2F4F3 /* Delay Test Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delay Test Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +75,6 @@
 		DC8DF2C7277C7F5100D2F4F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC8DF2CA277C7F5100D2F4F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC8DF2CC277C7F5100D2F4F3 /* Delay_Test_Launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delay_Test_Launcher.entitlements; sourceTree = "<group>"; };
-		DC8DF2D0277DBD4D00D2F4F3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		DC8DF2D4277DC62E00D2F4F3 /* SharedDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDefaults.swift; sourceTree = "<group>"; };
 		DC8DF2D7277E04BD00D2F4F3 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		DC8DF2DB277E059000D2F4F3 /* Delay-Test-Launcher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Delay-Test-Launcher-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -88,6 +85,11 @@
 		DCA34A922773A0CC00E1F1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/Delay Test-InfoPlist.strings"; sourceTree = "<group>"; };
 		DCA34AA02773A43C00E1F1A3 /* Support.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		DCCD4BCA277ADE1300F5EFF5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		DCD6A9AA27826CB200F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		DCD6A9AB27826CB200F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay Test-InfoPlist.strings"; sourceTree = "<group>"; };
+		DCD6A9AC27826CB200F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DCD6A9AD27826CB200F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
+		DCD6A9AF27826CBF00F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay-Test-Launcher-InfoPlist.strings"; sourceTree = "<group>"; };
 		DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseRightClickView.swift; sourceTree = "<group>"; };
 		FAC5E4280508DF8A4E928D6C /* Pods-Delay Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay Test.debug.xcconfig"; path = "Target Support Files/Pods-Delay Test/Pods-Delay Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				DC8DF2DB277E059000D2F4F3 /* Delay-Test-Launcher-Info.plist */,
+				DCD6A9AE27826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings */,
 				DC8DF2C3277C7F4F00D2F4F3 /* AppDelegate.swift */,
 				DC8DF2C5277C7F4F00D2F4F3 /* ViewController.swift */,
 				DC8DF2C7277C7F5100D2F4F3 /* Assets.xcassets */,
@@ -343,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD6A9B027826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings in Resources */,
 				DC8DF2C8277C7F5100D2F4F3 /* Assets.xcassets in Resources */,
 				DC8DF2CB277C7F5100D2F4F3 /* Main.storyboard in Resources */,
 			);
@@ -430,7 +434,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DC0074A527738D1600134077 /* en */,
-				DC2957CE277A044200A8645B /* zh-Hans */,
+				DCD6A9AD27826CB200F1C872 /* zh-Hans */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -439,7 +443,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DC8DF2CA277C7F5100D2F4F3 /* Base */,
-				DC8DF2D0277DBD4D00D2F4F3 /* zh-Hans */,
+				DCD6A9AA27826CB200F1C872 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -448,7 +452,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA34A8C27739FC500E1F1A3 /* en */,
-				DC2957CD277A044200A8645B /* zh-Hans */,
+				DCD6A9AC27826CB200F1C872 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			path = "/Users/zhaoxin/com.parussoft/DelayTest/Delay Test";
@@ -458,11 +462,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				DCA34A922773A0CC00E1F1A3 /* en */,
-				DC2957CC277A044200A8645B /* zh-Hans */,
+				DCD6A9AB27826CB200F1C872 /* zh-Hans */,
 			);
 			name = "Delay Test-InfoPlist.strings";
 			path = "/Users/zhaoxin/com.parussoft/DelayTest/Delay Test";
 			sourceTree = "<absolute>";
+		};
+		DCD6A9AE27826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCD6A9AF27826CBF00F1C872 /* zh-Hans */,
+			);
+			name = "Delay-Test-Launcher-InfoPlist.strings";
+			path = ..;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
@@ -593,7 +606,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -622,7 +635,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -650,7 +663,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -680,7 +693,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
