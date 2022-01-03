@@ -149,4 +149,11 @@ class SpeedTestService {
         stop()
         try await start()
     }
+    
+    func removeDatabase() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+    }
 }
