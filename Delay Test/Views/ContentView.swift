@@ -219,9 +219,7 @@ struct ContentView: View {
     }
     
     private func clear() {
-        DispatchQueue.main.async {
-            logs.forEach { $logs.remove($0) }
-        }
+        service.removeDatabase()
     }
     
     private func getFrequencyStaticstics(_ count:Int) -> FrequencyStaticstics {

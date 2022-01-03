@@ -38,9 +38,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("Login Item Was Not Successful")
         }
         
-        if runImmediately {
-            startButtonDisabled.toggle()
-            stopButtonDisabled.toggle()
+        if runImmediately  {
+            if !startButtonDisabled {
+                startButtonDisabled.toggle()
+                stopButtonDisabled.toggle()
+            }
+            
             NotificationCenter.default.post(name: SpeedTestService.start, object: self)
         }
     }
