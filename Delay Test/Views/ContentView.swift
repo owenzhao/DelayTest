@@ -159,7 +159,7 @@ struct ContentView: View {
                         
                         if startFromLauncher {
                             startFromLauncher.toggle()
-                            window.miniaturize(self)
+                            NSApp.hide(self)
                         }
                     }
                 }

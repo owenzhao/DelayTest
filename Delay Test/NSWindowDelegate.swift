@@ -15,18 +15,9 @@ class WindowDelegate:NSObject, NSWindowDelegate {
             return true
         }
         
-        window.miniaturize(self)
+        NSApp.hide(self)
         
         return false
     }
-    
-    func windowDidMiniaturize(_ notification: Notification) {
-        // hide from dock
-        NSApp.setActivationPolicy(.accessory)
-    }
-    
-    func windowDidDeminiaturize(_ notification: Notification) {
-        // show in dock
-        NSApp.setActivationPolicy(.regular)
-    }
+
 }

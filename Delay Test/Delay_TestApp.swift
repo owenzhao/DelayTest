@@ -274,3 +274,14 @@ extension AppDelegate:NSMenuDelegate {
         }
     }
 }
+
+// MARK: - hide delegate
+extension AppDelegate {
+    func applicationDidHide(_ notification: Notification) {
+        NSApp.setActivationPolicy(.accessory)
+    }
+    
+    func applicationDidUnhide(_ notification: Notification) {
+        NSApp.setActivationPolicy(.regular)
+    }
+}
