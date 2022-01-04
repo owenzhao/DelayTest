@@ -173,10 +173,10 @@ struct ContentView: View {
                 
                 isShown = true
             }
-            .onReceive(NotificationCenter.default.publisher(for: NSWindow.didMiniaturizeNotification, object: window), perform: { notification in
+            .onReceive(NotificationCenter.default.publisher(for: NSApplication.didHideNotification, object: nil), perform: { _ in
                 isShown = false
             })
-            .onReceive(NotificationCenter.default.publisher(for: NSWindow.didDeminiaturizeNotification, object: window), perform: { notification in
+            .onReceive(NotificationCenter.default.publisher(for: NSApplication.didUnhideNotification, object: nil), perform: { _ in
                 isShown = true
             })
             
