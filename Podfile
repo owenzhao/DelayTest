@@ -8,6 +8,6 @@ target 'Delay Test' do
   use_frameworks!
 
   # Pods for Delay Test
-  pod 'RealmSwift'
+  # pod 'RealmSwift'
 
 end

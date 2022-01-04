@@ -39,6 +39,10 @@
 		DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4BCA277ADE1300F5EFF5 /* Service.swift */; };
 		DCD6A9B027826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCD6A9AE27826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings */; };
 		DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */; };
+		DCF28C8A2784C0E4009604EB /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF28C882784C0E4009604EB /* RealmSwift.xcframework */; };
+		DCF28C8B2784C0E4009604EB /* RealmSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCF28C882784C0E4009604EB /* RealmSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DCF28C8C2784C0E4009604EB /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF28C892784C0E4009604EB /* Realm.xcframework */; };
+		DCF28C8D2784C0E4009604EB /* Realm.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCF28C892784C0E4009604EB /* Realm.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +54,18 @@
 			files = (
 				DC8DF2DA277E053D00D2F4F3 /* Delay Test Launcher.app in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF28C8E2784C0E4009604EB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DCF28C8B2784C0E4009604EB /* RealmSwift.xcframework in Embed Frameworks */,
+				DCF28C8D2784C0E4009604EB /* Realm.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -91,6 +107,8 @@
 		DCD6A9AD27826CB200F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		DCD6A9AF27826CBF00F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay-Test-Launcher-InfoPlist.strings"; sourceTree = "<group>"; };
 		DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseRightClickView.swift; sourceTree = "<group>"; };
+		DCF28C882784C0E4009604EB /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = Frameworks/RealmSwift.xcframework; sourceTree = "<group>"; };
+		DCF28C892784C0E4009604EB /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Realm.xcframework; path = Frameworks/Realm.xcframework; sourceTree = "<group>"; };
 		FAC5E4280508DF8A4E928D6C /* Pods-Delay Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay Test.debug.xcconfig"; path = "Target Support Files/Pods-Delay Test/Pods-Delay Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,8 +118,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA151912779975A00E2F1C6 /* Defaults in Frameworks */,
+				DCF28C8A2784C0E4009604EB /* RealmSwift.xcframework in Frameworks */,
 				DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */,
 				DC8DF2D8277E04BD00D2F4F3 /* ServiceManagement.framework in Frameworks */,
+				DCF28C8C2784C0E4009604EB /* Realm.xcframework in Frameworks */,
 				DC94B04D2777C07E00BEE246 /* Preferences in Frameworks */,
 				7B2F1ACB1F6CED398F46148F /* Pods_Delay_Test.framework in Frameworks */,
 			);
@@ -121,6 +141,8 @@
 		91D05E4747337D71AE1A767F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCF28C892784C0E4009604EB /* Realm.xcframework */,
+				DCF28C882784C0E4009604EB /* RealmSwift.xcframework */,
 				DC8DF2D7277E04BD00D2F4F3 /* ServiceManagement.framework */,
 				05FA40D3E23EF4AA092EA443 /* Pods_Delay_Test.framework */,
 			);
@@ -248,8 +270,8 @@
 				DC1834A1276FB1B500D906BC /* Sources */,
 				DC1834A2276FB1B500D906BC /* Frameworks */,
 				DC1834A3276FB1B500D906BC /* Resources */,
-				90D6C054F452349C5AF15759 /* [CP] Embed Pods Frameworks */,
 				DC8DF2D9277E04F300D2F4F3 /* CopyFiles */,
+				DCF28C8E2784C0E4009604EB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,23 +397,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90D6C054F452349C5AF15759 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -606,7 +611,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -635,7 +640,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -663,7 +668,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -693,7 +698,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
