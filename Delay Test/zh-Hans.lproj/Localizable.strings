@@ -59,6 +59,8 @@
 "Connection timed out." = "连接超时。";
 
 /* No comment provided by engineer. */
+"Delay Test: %@" = "延迟测试：%@";
+
 "Delay Test" = "延迟测试";
 
 /* No comment provided by engineer. */

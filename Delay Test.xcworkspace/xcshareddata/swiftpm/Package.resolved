@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Chinese24Jieqi",
+        "repositoryURL": "git@github.com:owenzhao/Chinese-24-Jieqi.git",
+        "state": {
+          "branch": null,
+          "revision": "f010e3e324531453d8e98759ff51750bf66f5da9",
+          "version": "1.0.18"
+        }
+      },
+      {
         "package": "Defaults",
         "repositoryURL": "git@github.com:sindresorhus/Defaults.git",
         "state": {

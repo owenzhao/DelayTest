@@ -126,7 +126,6 @@ struct Delay_TestApp: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             ContentView(service: $service)
-                .navigationTitle(NSLocalizedString("Delay Test", comment: ""))
         }.commands {
             CommandGroup(replacing: CommandGroupPlacement.appSettings) {
                 Button("Preferences...") {

@@ -8,6 +8,7 @@
 import SwiftUI
 import RealmSwift
 import Defaults
+import Chinese24Jieqi
 
 struct ContentView: View {
     @Binding var service:SpeedTestService
@@ -179,7 +180,7 @@ struct ContentView: View {
             .onReceive(NotificationCenter.default.publisher(for: NSApplication.didUnhideNotification, object: nil), perform: { _ in
                 isShown = true
             })
-            
+            .navigationTitle(String(format: NSLocalizedString("Delay Test: %@", comment: ""), getDateString()))
             .toolbar {
                 Button {
                     windowOnTop.toggle()
@@ -197,6 +198,16 @@ struct ContentView: View {
                     
                 }
             }
+    }
+    
+    private func getDateString() -> String {
+        let jieqi = Jieqi()
+        
+        if let log = logs.sorted(byKeyPath: "startTime", ascending: false).first {
+            return jieqi.xinwenlianboDateString(log.startTime)
+        }
+        
+        return jieqi.xinwenlianboDateString(Date())
     }
     
     private func getResult(from log:DTLog) -> DTResult {

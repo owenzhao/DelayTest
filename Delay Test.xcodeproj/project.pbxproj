@@ -11,6 +11,7 @@
 		DC0074A12773215500134077 /* DurationStaticsticsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0074A02773215500134077 /* DurationStaticsticsSwiftUIView.swift */; };
 		DC0074A427738D1600134077 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DC0074A627738D1600134077 /* Localizable.stringsdict */; };
 		DC0074AA277395C500134077 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0074A9277395C500134077 /* URLSession+Extension.swift */; };
+		DC0F02822789FDB4001E33CB /* Chinese24Jieqi in Frameworks */ = {isa = PBXBuildFile; productRef = DC0F02812789FDB4001E33CB /* Chinese24Jieqi */; };
 		DC1834A9276FB1B500D906BC /* Delay_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1834A8276FB1B500D906BC /* Delay_TestApp.swift */; };
 		DC1834AB276FB1B500D906BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1834AA276FB1B500D906BC /* ContentView.swift */; };
 		DC1834AD276FB1B700D906BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1834AC276FB1B700D906BC /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		DCA34A912773A0CC00E1F1A3 /* Delay Test-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA34A932773A0CC00E1F1A3 /* Delay Test-InfoPlist.strings */; };
 		DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */ = {isa = PBXBuildFile; productRef = DCA34A962773A32E00E1F1A3 /* MyAppStore */; };
 		DCA34AA12773A43C00E1F1A3 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA34AA02773A43C00E1F1A3 /* Support.storyboard */; };
+		DCA62035278A168200A7343E /* Chinese24Jieqi in Frameworks */ = {isa = PBXBuildFile; productRef = DCA62034278A168200A7343E /* Chinese24Jieqi */; };
 		DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4BCA277ADE1300F5EFF5 /* Service.swift */; };
 		DCD6A9B027826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCD6A9AE27826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings */; };
 		DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */; };
@@ -120,8 +122,10 @@
 				DCA151912779975A00E2F1C6 /* Defaults in Frameworks */,
 				DCF28C8A2784C0E4009604EB /* RealmSwift.xcframework in Frameworks */,
 				DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */,
+				DCA62035278A168200A7343E /* Chinese24Jieqi in Frameworks */,
 				DC8DF2D8277E04BD00D2F4F3 /* ServiceManagement.framework in Frameworks */,
 				DCF28C8C2784C0E4009604EB /* Realm.xcframework in Frameworks */,
+				DC0F02822789FDB4001E33CB /* Chinese24Jieqi in Frameworks */,
 				DC94B04D2777C07E00BEE246 /* Preferences in Frameworks */,
 				7B2F1ACB1F6CED398F46148F /* Pods_Delay_Test.framework in Frameworks */,
 			);
@@ -282,6 +286,8 @@
 				DCA34A962773A32E00E1F1A3 /* MyAppStore */,
 				DC94B04C2777C07E00BEE246 /* Preferences */,
 				DCA151902779975A00E2F1C6 /* Defaults */,
+				DC0F02812789FDB4001E33CB /* Chinese24Jieqi */,
+				DCA62034278A168200A7343E /* Chinese24Jieqi */,
 			);
 			productName = "Delay Test";
 			productReference = DC1834A5276FB1B500D906BC /* Delay Test.app */;
@@ -339,6 +345,7 @@
 				DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */,
 				DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */,
 				DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */,
+				DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */,
 			);
 			productRefGroup = DC1834A6276FB1B500D906BC /* Products */;
 			projectDirPath = "";
@@ -611,7 +618,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -640,7 +647,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -668,7 +675,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -698,7 +705,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -753,6 +760,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:owenzhao/Chinese-24-Jieqi.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:sindresorhus/Preferences.git";
@@ -777,9 +792,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:owenzhao/Chinese-24-Jieqi.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DC0F02812789FDB4001E33CB /* Chinese24Jieqi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */;
+			productName = Chinese24Jieqi;
+		};
 		DC8DF2D2277DC4FB00D2F4F3 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */;
@@ -799,6 +827,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */;
 			productName = MyAppStore;
+		};
+		DCA62034278A168200A7343E /* Chinese24Jieqi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */;
+			productName = Chinese24Jieqi;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
