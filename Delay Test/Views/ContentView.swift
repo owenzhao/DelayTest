@@ -141,6 +141,16 @@ struct ContentView: View {
                     DrurationStaticsticsSwiftUIView(durationStatistics: .constant(getDurationStaticstics($0)))
                 }
             }
+            
+            Spacer(minLength: 40)
+            
+            HStack {
+                Spacer()
+                
+                Text(getDateString())
+                    .font(.subheadline)
+                    .foregroundColor(.green)
+            }
         }.padding()
             .onReceive(newLogPublisher) { notification in
                 if let log = notification.userInfo?["log"] as? DTLog {
@@ -180,7 +190,8 @@ struct ContentView: View {
             .onReceive(NotificationCenter.default.publisher(for: NSApplication.didUnhideNotification, object: nil), perform: { _ in
                 isShown = true
             })
-            .navigationTitle(String(format: NSLocalizedString("Delay Test: %@", comment: ""), getDateString()))
+//            .navigationTitle(String(format: NSLocalizedString("Delay Test: %@", comment: ""), getDateString()))
+            .navigationTitle(NSLocalizedString("Delay Test", comment: ""))
             .toolbar {
                 Button {
                     windowOnTop.toggle()
