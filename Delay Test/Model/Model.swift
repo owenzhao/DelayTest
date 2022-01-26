@@ -31,6 +31,10 @@ struct FrequencyStaticstics:StaticsticsMethodHelper {
     
 //    MARK: - by Frequency
     func goodsIn(_ logs:Results<DTLog>) -> Double {
+        guard !logs.isEmpty else {
+            return 0
+        }
+        
         let logs = logs.sorted(byKeyPath: "startTime", ascending: false)[0..<count]
         
         if logs.isEmpty {
