@@ -15,8 +15,8 @@
         "repositoryURL": "git@github.com:sindresorhus/Defaults.git",
         "state": {
           "branch": null,
-          "revision": "55f3302c3ab30a8760f10042d0ebc0a6907f865a",
-          "version": "6.1.0"
+          "revision": "c9198bb1d097486711a36269b191f4e96d93130b",
+          "version": "6.2.0"
         }
       },
       {
@@ -26,6 +26,15 @@
           "branch": null,
           "revision": "bb77562b3dedb70392617b9c526c59717046ac68",
           "version": "1.4.6"
+        }
+      },
+      {
+        "package": "MyHost",
+        "repositoryURL": "git@github.com:owenzhao/MyHost.git",
+        "state": {
+          "branch": null,
+          "revision": "4bb5347a4b3c6438321c8388d054a688d380dc5c",
+          "version": "1.0.13"
         }
       },
       {

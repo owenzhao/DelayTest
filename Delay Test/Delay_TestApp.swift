@@ -13,6 +13,7 @@ import Defaults
 import UserNotifications
 import RealmSwift
 import ServiceManagement
+import MyHost
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     @Default(.startFromLauncher) private var startFromLauncher
@@ -28,6 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @Default(.failTextColor) private var failTextColor
     
     lazy private var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    
+    var host:MyHost!
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         setupMenubarTray()
@@ -46,6 +49,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             NotificationCenter.default.post(name: SpeedTestService.start, object: self)
         }
+        
+        host = MyHost()
     }
     
     func applicationWillTerminate(_ notification: Notification) {
@@ -125,7 +130,11 @@ struct Delay_TestApp: SwiftUI.App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(service: $service)
+            ContentView(service: $service,
+                        enthernet: NetworkLink(MAC: ""),
+                        wifi: NetworkLink(MAC: ""),
+                        internetIPV4: "",
+                        internetIPV6: "")
         }.commands {
             CommandGroup(replacing: CommandGroupPlacement.appSettings) {
                 Button("Preferences...") {

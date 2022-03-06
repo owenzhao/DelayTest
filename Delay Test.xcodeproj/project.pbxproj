@@ -38,6 +38,7 @@
 		DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */ = {isa = PBXBuildFile; productRef = DCA34A962773A32E00E1F1A3 /* MyAppStore */; };
 		DCA34AA12773A43C00E1F1A3 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA34AA02773A43C00E1F1A3 /* Support.storyboard */; };
 		DCA62035278A168200A7343E /* Chinese24Jieqi in Frameworks */ = {isa = PBXBuildFile; productRef = DCA62034278A168200A7343E /* Chinese24Jieqi */; };
+		DCAD4A4527D55CE50013EAE5 /* MyHost in Frameworks */ = {isa = PBXBuildFile; productRef = DCAD4A4427D55CE50013EAE5 /* MyHost */; };
 		DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4BCA277ADE1300F5EFF5 /* Service.swift */; };
 		DCD6A9B027826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCD6A9AE27826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings */; };
 		DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */; };
@@ -119,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAD4A4527D55CE50013EAE5 /* MyHost in Frameworks */,
 				DCA151912779975A00E2F1C6 /* Defaults in Frameworks */,
 				DCF28C8A2784C0E4009604EB /* RealmSwift.xcframework in Frameworks */,
 				DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */,
@@ -288,6 +290,7 @@
 				DCA151902779975A00E2F1C6 /* Defaults */,
 				DC0F02812789FDB4001E33CB /* Chinese24Jieqi */,
 				DCA62034278A168200A7343E /* Chinese24Jieqi */,
+				DCAD4A4427D55CE50013EAE5 /* MyHost */,
 			);
 			productName = "Delay Test";
 			productReference = DC1834A5276FB1B500D906BC /* Delay Test.app */;
@@ -346,6 +349,7 @@
 				DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */,
 				DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */,
 				DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */,
+				DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */,
 			);
 			productRefGroup = DC1834A6276FB1B500D906BC /* Products */;
 			projectDirPath = "";
@@ -800,6 +804,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:owenzhao/MyHost.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -832,6 +844,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */;
 			productName = Chinese24Jieqi;
+		};
+		DCAD4A4427D55CE50013EAE5 /* MyHost */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */;
+			productName = MyHost;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

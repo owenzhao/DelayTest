@@ -9,6 +9,7 @@ import SwiftUI
 import RealmSwift
 import Defaults
 import Chinese24Jieqi
+import MyHost
 
 struct ContentView: View {
     @Binding var service:SpeedTestService
@@ -34,6 +35,16 @@ struct ContentView: View {
     private let restTimePublisher = NotificationCenter.default.publisher(for: SpeedTestService.restTimeDidChanged, object: nil)
     
     @State private var windowOnTop = false
+    
+    @State var enthernet:NetworkLink
+    @State var wifi:NetworkLink
+    @State var internetIPV4:String
+    @State var internetIPV6:String
+    
+    private let enthernetUpdatePublisher = NotificationCenter.default.publisher(for: MyHost.EnthernetUpdate, object: nil)
+    private let wifiUpdatePublisher = NotificationCenter.default.publisher(for: MyHost.WifiUpdate, object: nil)
+    private let internetIPV4Publisher = NotificationCenter.default.publisher(for: MyHost.InternetIPV4Update, object: nil)
+    private let internetIPV6Publisher = NotificationCenter.default.publisher(for: MyHost.InternetIPV6Update, object: nil)
     
     var body: some View {
         ScrollView {
@@ -143,14 +154,57 @@ struct ContentView: View {
             }
             
             Spacer(minLength: 40)
-            
-            HStack {
+
+            HStack(alignment: .top, spacing: 20) {
+                Text(getDateString())
+                    .foregroundColor(.green)
+                
                 Spacer()
                 
-                Text(getDateString())
-                    .font(.subheadline)
-                    .foregroundColor(.green)
-            }
+                VStack(alignment: .leading, spacing: -15) {
+                    Text("Wired Network")
+                        .foregroundColor(.green)
+                    Text(show(networkLink:enthernet))
+                        .foregroundColor(.blue)
+                        .onReceive(enthernetUpdatePublisher) { notification in
+                            if let enthernet = notification.object as? NetworkLink {
+                                self.enthernet = enthernet
+                            }
+                        }
+                }
+                
+                VStack(alignment: .leading, spacing: -15) {
+                    Text("Wifi Network")
+                        .foregroundColor(.green)
+                    Text(show(networkLink:wifi))
+                        .foregroundColor(.blue)
+                        .onReceive(wifiUpdatePublisher) { notification in
+                            if let wifi = notification.object as? NetworkLink {
+                                self.wifi = wifi
+                            }
+                        }
+                }
+                
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Internet")
+                        .foregroundColor(.green)
+                    Text("IPV4: \(internetIPV4)")
+                        .foregroundColor(.blue)
+                        .onReceive(internetIPV4Publisher) { notification in
+                            if let internet = notification.object as? String {
+                                internetIPV4 = internet
+                            }
+                        }
+                    Text("IPV6: \(internetIPV6)")
+                        .foregroundColor(.blue)
+                        .onReceive(internetIPV4Publisher) { notification in
+                            if let internet = notification.object as? String {
+                                internetIPV6 = internet
+                            }
+                        }
+                }
+            }.padding()
+            .font(.subheadline)
         }.padding()
             .onReceive(newLogPublisher) { notification in
                 if let log = notification.userInfo?["log"] as? DTLog {
@@ -301,6 +355,24 @@ struct ContentView: View {
         
         return disconnectedTimePoints
     }
+    
+    private func show(networkLink:NetworkLink) -> String {
+        var result = "\nMac: \(networkLink.MAC)"
+        
+        if let ipv4 = networkLink.ipv4 {
+            result += "\nIPV4: \(ipv4)"
+        } else {
+            result += NSLocalizedString("\nIPV4: Inactive", comment: "")
+        }
+        
+        if let ipv6 = networkLink.ipv6 {
+            result += "\nIPV6: \(ipv6)"
+        } else {
+            result += NSLocalizedString("\nIPV6: Inactive", comment: "")
+        }
+        
+        return result
+    }
 }
 
 enum StatisticalMethod:String, CaseIterable, Identifiable {
@@ -323,6 +395,10 @@ enum StatisticalMethod:String, CaseIterable, Identifiable {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(service: .constant(SpeedTestService()))
+        ContentView(service: .constant(SpeedTestService()),
+                    enthernet: NetworkLink(MAC: ""),
+                    wifi: NetworkLink(MAC: ""),
+                    internetIPV4: "",
+                    internetIPV6: "")
     }
 }
