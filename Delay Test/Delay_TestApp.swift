@@ -50,7 +50,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NotificationCenter.default.post(name: SpeedTestService.start, object: self)
         }
         
-        host = MyHost()
+        Task {
+            host = await MyHost()
+        }
     }
     
     func applicationWillTerminate(_ notification: Notification) {
