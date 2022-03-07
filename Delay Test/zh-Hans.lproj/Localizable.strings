@@ -1,4 +1,10 @@
 /* No comment provided by engineer. */
+"\nIPV4: Inactive" = "\nIPV4：不活跃";
+
+/* No comment provided by engineer. */
+"\nIPV6: Inactive" = "\nIPV6：不活跃";
+
+/* No comment provided by engineer. */
 "%d hours" = "%d小时";
 
 /* No comment provided by engineer. */
@@ -59,8 +65,6 @@
 "Connection timed out." = "连接超时。";
 
 /* No comment provided by engineer. */
-"Delay Test: %@" = "延迟测试：%@";
-
 "Delay Test" = "延迟测试";
 
 /* No comment provided by engineer. */
@@ -98,6 +102,15 @@
 
 /* No comment provided by engineer. */
 "Indigo" = "靛蓝";
+
+/* No comment provided by engineer. */
+"Internet" = "互联网";
+
+/* No comment provided by engineer. */
+"IPV4: %@" = "IPV4：%@";
+
+/* No comment provided by engineer. */
+"IPV6: %@" = "IPV6：%@";
 
 /* No comment provided by engineer. */
 "Label Color" = "标签色";
@@ -182,6 +195,12 @@
 
 /* No comment provided by engineer. */
 "White" = "白";
+
+/* No comment provided by engineer. */
+"Wifi Network" = "无线网络";
+
+/* No comment provided by engineer. */
+"Wired Network" = "有线网络";
 
 /* No comment provided by engineer. */
 "Yellow" = "黄";
