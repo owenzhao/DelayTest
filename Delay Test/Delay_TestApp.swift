@@ -29,6 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @Default(.failTextColor) private var failTextColor
     
     lazy private var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    lazy private var canEnterFullInternet = true
+    private var updateFailTextTimer:Timer!
     
     var host:MyHost!
     
@@ -166,6 +168,17 @@ extension AppDelegate {
             if let result = realm.objects(DTLog.self).sorted(byKeyPath: "startTime", ascending: false).first {
                 connected = result.connected
                 
+                if connected {
+                    if !canEnterFullInternet {
+                        canEnterFullInternet = true
+                        stopUpdateFailTextTimer()
+                    }
+                } else {
+                    if canEnterFullInternet {
+                        canEnterFullInternet.toggle()
+                    }
+                }
+                
                 if notifyOnceWhenNetworkGood && connected {
                     let delay = result.delay
                     
@@ -201,10 +214,31 @@ extension AppDelegate {
                     button.attributedTitle = NSAttributedString(string: goodText,
                                                                 attributes: [.foregroundColor : NSColor(goodTextColor.color)])
                 } else {
-                    button.attributedTitle = NSAttributedString(string: failText,
-                                                                attributes: [.foregroundColor : NSColor(failTextColor.color)])
+                    if updateFailTextTimer == nil {
+                        startUpdateFailTextTimer()
+                    }
                 }
             }
+        }
+    }
+// MARK: - update fail text
+    private func startUpdateFailTextTimer() {
+        let startTime = ProcessInfo.processInfo.systemUptime
+        
+        updateFailTextTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] _ in
+            if let button = statusItem.button {
+                let now = ProcessInfo.processInfo.systemUptime
+                let updateFailText = failText  + String(Int(now - startTime))
+                button.attributedTitle = NSAttributedString(string: updateFailText,
+                                                            attributes: [.foregroundColor : NSColor(failTextColor.color)])
+            }
+        })
+    }
+    
+    private func stopUpdateFailTextTimer() {
+        if updateFailTextTimer != nil {
+            updateFailTextTimer.invalidate()
+            updateFailTextTimer = nil
         }
     }
     

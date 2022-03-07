@@ -88,6 +88,7 @@
 		DC23D8B4277E6518000CF701 /* NSWindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowDelegate.swift; sourceTree = "<group>"; };
 		DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyStatisticItemSwiftUIView.swift; sourceTree = "<group>"; };
 		DC2CCA6C2772ADE100558B4F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DC54A80927D68DA600193A4D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DC8DF2C1277C7F4F00D2F4F3 /* Delay Test Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delay Test Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8DF2C3277C7F4F00D2F4F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC8DF2C5277C7F4F00D2F4F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		91D05E4747337D71AE1A767F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC54A80927D68DA600193A4D /* XCTest.framework */,
 				DCF28C892784C0E4009604EB /* Realm.xcframework */,
 				DCF28C882784C0E4009604EB /* RealmSwift.xcframework */,
 				DC8DF2D7277E04BD00D2F4F3 /* ServiceManagement.framework */,
@@ -622,7 +624,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -634,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -651,7 +653,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -663,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -679,7 +681,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -692,7 +694,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test-Launcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -709,7 +711,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -722,7 +724,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test-Launcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
