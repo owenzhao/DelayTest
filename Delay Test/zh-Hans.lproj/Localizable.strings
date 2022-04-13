@@ -101,6 +101,12 @@
 "Icon" = "图标";
 
 /* No comment provided by engineer. */
+"in minutes" = "分钟";
+
+/* No comment provided by engineer. */
+"in times" = "次数";
+
+/* No comment provided by engineer. */
 "Indigo" = "靛蓝";
 
 /* No comment provided by engineer. */
@@ -126,6 +132,9 @@
 
 /* No comment provided by engineer. */
 "Network Connected" = "网络已连接";
+
+/* No comment provided by engineer. */
+"No data." = "无数据。";
 
 /* No comment provided by engineer. */
 "Not test yet." = "还没测试。";
@@ -176,6 +185,9 @@
 "Stop" = "停止";
 
 /* No comment provided by engineer. */
+"Stopped." = "已停止。";
+
+/* No comment provided by engineer. */
 "Tertiary Label Color" = "第三重要标签色";
 
 /* No comment provided by engineer. */
@@ -183,6 +195,9 @@
 
 /* No comment provided by engineer. */
 "Test Intervals" = "测试间隔";
+
+/* No comment provided by engineer. */
+"Testing..." = "测试中……";
 
 /* No comment provided by engineer. */
 "Text" = "文本";
@@ -198,6 +213,9 @@
 
 /* No comment provided by engineer. */
 "Wifi Network" = "无线网络";
+
+/* No comment provided by engineer. */
+"Window On Top" = "保持窗口在上";
 
 /* No comment provided by engineer. */
 "Wired Network" = "有线网络";
