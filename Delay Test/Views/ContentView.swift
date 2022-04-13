@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Internet Helper
+//  Delay Test
 //
 //  Created by zhaoxin on 2021/12/20.
 //
@@ -267,7 +267,7 @@ struct ContentView: View {
             .onReceive(NotificationCenter.default.publisher(for: NSApplication.didUnhideNotification, object: nil), perform: { _ in
                 isShown = true
             })
-            .navigationTitle(NSLocalizedString("Internet Helper", comment: ""))
+            .navigationTitle(NSLocalizedString("Delay Test", comment: ""))
 //        MARK: - Toolbar
             .toolbar {
                 HStack {
@@ -312,31 +312,6 @@ struct ContentView: View {
         }
     }
     
-//    private func getFullname() -> String {
-//        let username = keychain[KeyChainName.fullName.rawValue]
-//
-//        guard let username = username else {
-//            return NSLocalizedString("Not Login", comment: "")
-//        }
-//
-//        isLogin = true
-//
-//        if username.isEmpty {
-//            return NSLocalizedString("Empty Name", comment: "")
-//        }
-//
-//        if let memberData = keychain[data: "member"] {
-//            let decoder = JSONDecoder()
-//            let member = try! decoder.decode(Member.self, from: memberData)
-//
-//            if member.isInMembership && member.expireDate! > Date() {
-//                return "👑" + username
-//            }
-//        }
-//
-//        return username
-//    }
-    
     private func getDateString() -> String {
         let jieqi = Jieqi()
         
@@ -348,7 +323,6 @@ struct ContentView: View {
     }
     
     private func clear() {
-//        service.removeDatabase()
         model.clear()
     }
     

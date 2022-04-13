@@ -1,6 +1,6 @@
 //
 //  DurationStaticsticsSwiftUIView.swift
-//  Internet Helper
+//  Delay Test
 //
 //  Created by zhaoxin on 2021/12/22.
 //
