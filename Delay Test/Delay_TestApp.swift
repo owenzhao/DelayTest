@@ -82,6 +82,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 setupMenubarTray()
             }
         }
+        
+        NotificationCenter.default.addObserver(forName: SpeedTestServiceNotification.stop, object: nil, queue: nil) { [self] _ in
+            if updateFailTextTimer != nil {
+                updateFailTextTimer.invalidate()
+                updateFailTextTimer = nil
+            }
+        }
     }
     
     private func addNotification(with delay:Int) async throws {
@@ -100,6 +107,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NotificationCenter.default.removeObserver(self, name: Notification.Name.statusBarSettingsDidChanged, object: nil)
         NotificationCenter.default.removeObserver(self, name: Notification.Name.statusBarStyleDidChanged, object: nil)
         NotificationCenter.default.removeObserver(self, name: Notification.Name.dtLogNewLog, object: nil)
+        NotificationCenter.default.removeObserver(self, name: SpeedTestServiceNotification.stop, object: nil)
     }
 }
 
@@ -207,7 +215,9 @@ extension AppDelegate {
                 if connected {
                     button.image = NSImage(imageLiteralResourceName: "snail")
                 } else {
-                    button.image = NSImage(imageLiteralResourceName: "color-snail")
+                    if updateFailTextTimer == nil {
+                        startUpdateFailTextTimer()
+                    }
                 }
             case .text:
                 if connected {
@@ -228,9 +238,25 @@ extension AppDelegate {
         updateFailTextTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] _ in
             if let button = statusItem.button {
                 let now = ProcessInfo.processInfo.systemUptime
-                let updateFailText = failText  + String(Int(now - startTime))
-                button.attributedTitle = NSAttributedString(string: updateFailText,
-                                                            attributes: [.foregroundColor : NSColor(failTextColor.color)])
+                let counter = String(Int(now - startTime))
+                
+                let attributeString = NSMutableAttributedString(string: counter,
+                                                            attributes: [.foregroundColor : NSColor(failTextColor.color),
+                                                                         .baselineOffset: -1])
+                
+                switch statusBarStyle {
+                case .icon:
+                    let image = NSImage(imageLiteralResourceName: "color-snail")
+                    let attachment = NSTextAttachment()
+                    attachment.image = image
+                    let mutableAttibulteString = NSMutableAttributedString(attachment: attachment)
+                    mutableAttibulteString.addAttributes([.baselineOffset: -3], range: NSRange(location: 0, length: mutableAttibulteString.length))
+                    attributeString.insert(mutableAttibulteString, at: 0)
+                    button.attributedTitle = attributeString
+                case .text:
+                    attributeString.insert(NSAttributedString(string: failText), at: 0)
+                    button.attributedTitle = attributeString
+                }
             }
         })
     }
