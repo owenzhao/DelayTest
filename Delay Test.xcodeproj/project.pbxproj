@@ -16,9 +16,9 @@
 		DC1834AB276FB1B500D906BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1834AA276FB1B500D906BC /* ContentView.swift */; };
 		DC1834AD276FB1B700D906BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1834AC276FB1B700D906BC /* Assets.xcassets */; };
 		DC1834B0276FB1B700D906BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */; };
-		DC23D8B5277E6518000CF701 /* NSWindowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23D8B4277E6518000CF701 /* NSWindowDelegate.swift */; };
+		DC23D8B5277E6518000CF701 /* WindowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC23D8B4277E6518000CF701 /* WindowDelegate.swift */; };
 		DC2CCA6B2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */; };
-		DC2CCA6D2772ADE100558B4F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6C2772ADE100558B4F /* Model.swift */; };
+		DC2CCA6D2772ADE100558B4F /* DTLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2CCA6C2772ADE100558B4F /* DTLog.swift */; };
 		DC8DF2C4277C7F4F00D2F4F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8DF2C3277C7F4F00D2F4F3 /* AppDelegate.swift */; };
 		DC8DF2C6277C7F4F00D2F4F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8DF2C5277C7F4F00D2F4F3 /* ViewController.swift */; };
 		DC8DF2C8277C7F5100D2F4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8DF2C7277C7F5100D2F4F3 /* Assets.xcassets */; };
@@ -41,7 +41,11 @@
 		DCAD4A4527D55CE50013EAE5 /* MyHost in Frameworks */ = {isa = PBXBuildFile; productRef = DCAD4A4427D55CE50013EAE5 /* MyHost */; };
 		DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4BCA277ADE1300F5EFF5 /* Service.swift */; };
 		DCD6A9B027826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCD6A9AE27826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings */; };
-		DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */; };
+		DCE2D6C52806A665006DBCB9 /* Defaults+WorkAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2D6C42806A665006DBCB9 /* Defaults+WorkAround.swift */; };
+		DCE2D6C72806A9B3006DBCB9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2D6C62806A9B3006DBCB9 /* Model.swift */; };
+		DCE2D6CB2806AAC0006DBCB9 /* SwiftUIWindowBinder in Frameworks */ = {isa = PBXBuildFile; productRef = DCE2D6CA2806AAC0006DBCB9 /* SwiftUIWindowBinder */; };
+		DCE2D6CE2806AAFE006DBCB9 /* Notification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2D6CD2806AAFE006DBCB9 /* Notification.Name+Extension.swift */; };
+		DCE2D6D02806AB2F006DBCB9 /* IHWindowSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE2D6CF2806AB2F006DBCB9 /* IHWindowSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,9 +83,9 @@
 		DC1834AC276FB1B700D906BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1834AF276FB1B700D906BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC1834B1276FB1B700D906BC /* Delay_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Delay_Test.entitlements; sourceTree = "<group>"; };
-		DC23D8B4277E6518000CF701 /* NSWindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowDelegate.swift; sourceTree = "<group>"; };
+		DC23D8B4277E6518000CF701 /* WindowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowDelegate.swift; sourceTree = "<group>"; };
 		DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyStatisticItemSwiftUIView.swift; sourceTree = "<group>"; };
-		DC2CCA6C2772ADE100558B4F /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DC2CCA6C2772ADE100558B4F /* DTLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTLog.swift; sourceTree = "<group>"; };
 		DC54A80927D68DA600193A4D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DC8DF2C1277C7F4F00D2F4F3 /* Delay Test Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delay Test Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8DF2C3277C7F4F00D2F4F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +108,10 @@
 		DCD6A9AC27826CB200F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		DCD6A9AD27826CB200F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		DCD6A9AF27826CBF00F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay-Test-Launcher-InfoPlist.strings"; sourceTree = "<group>"; };
-		DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseRightClickView.swift; sourceTree = "<group>"; };
+		DCE2D6C42806A665006DBCB9 /* Defaults+WorkAround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Defaults+WorkAround.swift"; sourceTree = "<group>"; };
+		DCE2D6C62806A9B3006DBCB9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DCE2D6CD2806AAFE006DBCB9 /* Notification.Name+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extension.swift"; sourceTree = "<group>"; };
+		DCE2D6CF2806AB2F006DBCB9 /* IHWindowSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IHWindowSize.swift; sourceTree = "<group>"; };
 		FAC5E4280508DF8A4E928D6C /* Pods-Delay Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay Test.debug.xcconfig"; path = "Target Support Files/Pods-Delay Test/Pods-Delay Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE2D6CB2806AAC0006DBCB9 /* SwiftUIWindowBinder in Frameworks */,
 				DCAD4A4527D55CE50013EAE5 /* MyHost in Frameworks */,
 				DCA151912779975A00E2F1C6 /* Defaults in Frameworks */,
 				DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */,
@@ -182,9 +190,10 @@
 				DCCD4BCD277AFCCF00F5EFF5 /* Service */,
 				DCCD4BCE277AFCDE00F5EFF5 /* Views */,
 				DCCD4BCF277AFD1900F5EFF5 /* Model */,
+				DCE2D6CC2806AAFE006DBCB9 /* Notifications */,
 				DCCD4BCC277AFCB100F5EFF5 /* Preferences */,
 				DC0074A9277395C500134077 /* URLSession+Extension.swift */,
-				DC23D8B4277E6518000CF701 /* NSWindowDelegate.swift */,
+				DCE2D6C82806A9F1006DBCB9 /* Helper */,
 				DCA34A932773A0CC00E1F1A3 /* Delay Test-InfoPlist.strings */,
 				DCA34A8D27739FC500E1F1A3 /* Localizable.strings */,
 				DC0074A627738D1600134077 /* Localizable.stringsdict */,
@@ -224,6 +233,7 @@
 				DC8DF2D4277DC62E00D2F4F3 /* SharedDefaults.swift */,
 				DC94B04E2777C0C700BEE246 /* GeneralSettingsView.swift */,
 				DCA1518D2778E0E400E2F1C6 /* StatusBarSettingView.swift */,
+				DCE2D6C42806A665006DBCB9 /* Defaults+WorkAround.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -239,7 +249,6 @@
 		DCCD4BCE277AFCDE00F5EFF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */,
 				DC0074A02773215500134077 /* DurationStaticsticsSwiftUIView.swift */,
 				DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */,
 				DC1834AA276FB1B500D906BC /* ContentView.swift */,
@@ -250,9 +259,27 @@
 		DCCD4BCF277AFD1900F5EFF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DC2CCA6C2772ADE100558B4F /* Model.swift */,
+				DC2CCA6C2772ADE100558B4F /* DTLog.swift */,
+				DCE2D6C62806A9B3006DBCB9 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DCE2D6C82806A9F1006DBCB9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DCE2D6CF2806AB2F006DBCB9 /* IHWindowSize.swift */,
+				DC23D8B4277E6518000CF701 /* WindowDelegate.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DCE2D6CC2806AAFE006DBCB9 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				DCE2D6CD2806AAFE006DBCB9 /* Notification.Name+Extension.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +309,7 @@
 				DC0F02812789FDB4001E33CB /* Chinese24Jieqi */,
 				DCA62034278A168200A7343E /* Chinese24Jieqi */,
 				DCAD4A4427D55CE50013EAE5 /* MyHost */,
+				DCE2D6CA2806AAC0006DBCB9 /* SwiftUIWindowBinder */,
 			);
 			productName = "Delay Test";
 			productReference = DC1834A5276FB1B500D906BC /* Delay Test.app */;
@@ -336,11 +364,12 @@
 			);
 			mainGroup = DC18349C276FB1B500D906BC;
 			packageReferences = (
-				DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore.git" */,
-				DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences.git" */,
-				DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults.git" */,
-				DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */,
-				DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost.git" */,
+				DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */,
+				DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */,
+				DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */,
+				DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */,
+				DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */,
+				DCE2D6C92806AAC0006DBCB9 /* XCRemoteSwiftPackageReference "SwiftUIWindowBinder" */,
 			);
 			productRefGroup = DC1834A6276FB1B500D906BC /* Products */;
 			projectDirPath = "";
@@ -425,8 +454,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE2D6C72806A9B3006DBCB9 /* Model.swift in Sources */,
 				DC2CCA6B2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift in Sources */,
-				DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */,
 				DC8DF2D5277DC62E00D2F4F3 /* SharedDefaults.swift in Sources */,
 				DC0074A12773215500134077 /* DurationStaticsticsSwiftUIView.swift in Sources */,
 				DC0074AA277395C500134077 /* URLSession+Extension.swift in Sources */,
@@ -434,10 +463,13 @@
 				DCA1519327799DEB00E2F1C6 /* DefaultsKeys.swift in Sources */,
 				DC1834AB276FB1B500D906BC /* ContentView.swift in Sources */,
 				DC1834A9276FB1B500D906BC /* Delay_TestApp.swift in Sources */,
+				DCE2D6C52806A665006DBCB9 /* Defaults+WorkAround.swift in Sources */,
+				DCE2D6D02806AB2F006DBCB9 /* IHWindowSize.swift in Sources */,
 				DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */,
 				DC94B04F2777C0C700BEE246 /* GeneralSettingsView.swift in Sources */,
-				DC23D8B5277E6518000CF701 /* NSWindowDelegate.swift in Sources */,
-				DC2CCA6D2772ADE100558B4F /* Model.swift in Sources */,
+				DC23D8B5277E6518000CF701 /* WindowDelegate.swift in Sources */,
+				DCE2D6CE2806AAFE006DBCB9 /* Notification.Name+Extension.swift in Sources */,
+				DC2CCA6D2772ADE100558B4F /* DTLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,7 +804,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */ = {
+		DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/Chinese-24-Jieqi.git";
 			requirement = {
@@ -780,7 +812,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences.git" */ = {
+		DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:sindresorhus/Preferences.git";
 			requirement = {
@@ -788,15 +820,15 @@
 				minimumVersion = 2.5.0;
 			};
 		};
-		DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults.git" */ = {
+		DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:sindresorhus/Defaults.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.1.0;
+				minimumVersion = 6.2.1;
 			};
 		};
-		DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore.git" */ = {
+		DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/MyAppStore.git";
 			requirement = {
@@ -804,7 +836,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */ = {
+		DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/Chinese-24-Jieqi.git";
 			requirement = {
@@ -812,12 +844,20 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost.git" */ = {
+		DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/MyHost.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.9;
+				minimumVersion = 3.0.0;
+			};
+		};
+		DCE2D6C92806AAC0006DBCB9 /* XCRemoteSwiftPackageReference "SwiftUIWindowBinder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:happycodelucky/SwiftUIWindowBinder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -825,38 +865,43 @@
 /* Begin XCSwiftPackageProductDependency section */
 		DC0F02812789FDB4001E33CB /* Chinese24Jieqi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */;
+			package = DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */;
 			productName = Chinese24Jieqi;
 		};
 		DC8DF2D2277DC4FB00D2F4F3 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults.git" */;
+			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
 		};
 		DC94B04C2777C07E00BEE246 /* Preferences */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences.git" */;
+			package = DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */;
 			productName = Preferences;
 		};
 		DCA151902779975A00E2F1C6 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults.git" */;
+			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;
 		};
 		DCA34A962773A32E00E1F1A3 /* MyAppStore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore.git" */;
+			package = DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */;
 			productName = MyAppStore;
 		};
 		DCA62034278A168200A7343E /* Chinese24Jieqi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */;
+			package = DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */;
 			productName = Chinese24Jieqi;
 		};
 		DCAD4A4427D55CE50013EAE5 /* MyHost */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost.git" */;
+			package = DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */;
 			productName = MyHost;
+		};
+		DCE2D6CA2806AAC0006DBCB9 /* SwiftUIWindowBinder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCE2D6C92806AAC0006DBCB9 /* XCRemoteSwiftPackageReference "SwiftUIWindowBinder" */;
+			productName = SwiftUIWindowBinder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,70 +1,86 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Chinese24Jieqi",
-        "repositoryURL": "git@github.com:owenzhao/Chinese-24-Jieqi.git",
-        "state": {
-          "branch": null,
-          "revision": "f010e3e324531453d8e98759ff51750bf66f5da9",
-          "version": "1.0.18"
-        }
-      },
-      {
-        "package": "Defaults",
-        "repositoryURL": "git@github.com:sindresorhus/Defaults.git",
-        "state": {
-          "branch": null,
-          "revision": "c9198bb1d097486711a36269b191f4e96d93130b",
-          "version": "6.2.0"
-        }
-      },
-      {
-        "package": "MyAppStore",
-        "repositoryURL": "git@github.com:owenzhao/MyAppStore.git",
-        "state": {
-          "branch": null,
-          "revision": "bb77562b3dedb70392617b9c526c59717046ac68",
-          "version": "1.4.6"
-        }
-      },
-      {
-        "package": "MyHost",
-        "repositoryURL": "git@github.com:owenzhao/MyHost.git",
-        "state": {
-          "branch": null,
-          "revision": "beee87abdb0770ba0b61d6bd7f79c05ce2776805",
-          "version": "1.0.18"
-        }
-      },
-      {
-        "package": "Preferences",
-        "repositoryURL": "git@github.com:sindresorhus/Preferences.git",
-        "state": {
-          "branch": null,
-          "revision": "ffeaaad1def45d0625720dc1adae3789cd9c167d",
-          "version": "2.5.0"
-        }
-      },
-      {
-        "package": "QRCodeKit",
-        "repositoryURL": "git@github.com:owenzhao/QRCodeKit.git",
-        "state": {
-          "branch": null,
-          "revision": "db92920d4b31aac79c4a4589ddd358006447b8ce",
-          "version": "1.0.2"
-        }
-      },
-      {
-        "package": "ZIPFoundation",
-        "repositoryURL": "git@github.com:weichsel/ZIPFoundation.git",
-        "state": {
-          "branch": null,
-          "revision": "7254c74b49cec2cb81520523ba993c671f71b066",
-          "version": "0.9.14"
-        }
+  "pins" : [
+    {
+      "identity" : "chinese-24-jieqi",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:owenzhao/Chinese-24-Jieqi.git",
+      "state" : {
+        "revision" : "f010e3e324531453d8e98759ff51750bf66f5da9",
+        "version" : "1.0.18"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:sindresorhus/Defaults.git",
+      "state" : {
+        "revision" : "119f654d44f7b90f00dc11f7dd1c94a36f12576b",
+        "version" : "6.2.1"
+      }
+    },
+    {
+      "identity" : "myappstore",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:owenzhao/MyAppStore.git",
+      "state" : {
+        "revision" : "bb77562b3dedb70392617b9c526c59717046ac68",
+        "version" : "1.4.6"
+      }
+    },
+    {
+      "identity" : "myhost",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:owenzhao/MyHost.git",
+      "state" : {
+        "revision" : "c532d560708313bb2c97b758b9b1913846b78c37",
+        "version" : "3.0.2"
+      }
+    },
+    {
+      "identity" : "preferences",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:sindresorhus/Preferences.git",
+      "state" : {
+        "revision" : "ffeaaad1def45d0625720dc1adae3789cd9c167d",
+        "version" : "2.5.0"
+      }
+    },
+    {
+      "identity" : "qrcodekit",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:owenzhao/QRCodeKit.git",
+      "state" : {
+        "revision" : "db92920d4b31aac79c4a4589ddd358006447b8ce",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "speedtestservicenotification",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:owenzhao/SpeedTestServiceNotification.git",
+      "state" : {
+        "revision" : "6ad84a362c2331d4bfa0ddc12015d9f4bd35bf9c",
+        "version" : "2.0.2"
+      }
+    },
+    {
+      "identity" : "swiftuiwindowbinder",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:happycodelucky/SwiftUIWindowBinder.git",
+      "state" : {
+        "revision" : "27f9b1b28c58e7c00efc7661dde6663c9a49b145",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "7254c74b49cec2cb81520523ba993c671f71b066",
+        "version" : "0.9.14"
+      }
+    }
+  ],
+  "version" : 2
 }

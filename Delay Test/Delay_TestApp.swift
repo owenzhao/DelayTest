@@ -14,6 +14,7 @@ import UserNotifications
 import RealmSwift
 import ServiceManagement
 import MyHost
+import SpeedTestServiceNotification
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     @Default(.startFromLauncher) private var startFromLauncher
@@ -49,12 +50,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 stopButtonDisabled.toggle()
             }
             
-            NotificationCenter.default.post(name: SpeedTestService.start, object: self)
+            NotificationCenter.default.post(name: SpeedTestServiceNotification.start, object: self)
         }
         
-        Task {
-            host = await MyHost()
-        }
+        // run myhost
+        MyHost.start()
     }
     
     func applicationWillTerminate(_ notification: Notification) {
@@ -65,19 +65,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private func registerNotification() {
-        NotificationCenter.default.addObserver(forName: StatusBarSettingView.settingsDidChanged, object: nil, queue: nil) { notification in
+        NotificationCenter.default.addObserver(forName: Notification.Name.statusBarSettingsDidChanged, object: nil, queue: nil) { notification in
             DispatchQueue.main.async { [self] in
                 setupMenubarTray()
             }
         }
         
-        NotificationCenter.default.addObserver(forName: StatusBarStyle.didChanged, object: nil, queue: nil) { notification in
+        NotificationCenter.default.addObserver(forName: Notification.Name.statusBarStyleDidChanged, object: nil, queue: nil) { notification in
             DispatchQueue.main.async { [self] in
                 setupMenubarTray()
             }
         }
         
-        NotificationCenter.default.addObserver(forName: DTLog.newLog, object: nil, queue: nil) { notification in
+        NotificationCenter.default.addObserver(forName: Notification.Name.dtLogNewLog, object: nil, queue: nil) { notification in
             DispatchQueue.main.async { [self] in
                 setupMenubarTray()
             }
@@ -97,9 +97,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private func unregisterNotification() {
-        NotificationCenter.default.removeObserver(self, name: StatusBarSettingView.settingsDidChanged, object: nil)
-        NotificationCenter.default.removeObserver(self, name: StatusBarStyle.didChanged, object: nil)
-        NotificationCenter.default.removeObserver(self, name: DTLog.newLog, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.statusBarSettingsDidChanged, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.statusBarStyleDidChanged, object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.dtLogNewLog, object: nil)
     }
 }
 

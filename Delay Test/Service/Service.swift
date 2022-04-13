@@ -7,63 +7,30 @@
 
 import Foundation
 import Defaults
-import RealmSwift
+import SpeedTestServiceNotification
 
 class SpeedTestService {
-    static let restTimeDidChanged = Notification.Name("restTimeDidChanged")
-    
-    static let start = Notification.Name("start")
-    static let stop = Notification.Name("stop")
-    
-    
-    private var timer:Timer? = nil
-    private var restTime:Int = 5
-    private var updateTimer:Timer? = nil
-    
-    private let runLoop = RunLoop.current
-    
-    
     init() {
         registerNotification()
     }
     
     private func registerNotification() {
-        NotificationCenter.default.addObserver(forName: SpeedTestService.start, object: nil, queue: nil) { [self] notification in
+        NotificationCenter.default.addObserver(forName: SpeedTestServiceNotification.start, object: nil, queue: nil) { [self] notification in
             Task {
                 try await start()
             }
         }
-        
-        NotificationCenter.default.addObserver(forName: SpeedTestService.stop, object: nil, queue: nil) { [self] notification in
-            stop()
-        }
     }
     
     func start() async throws {
-        // arrange next timer
-        arrangeNextTimer()
-        // calculate rest timer
-        updateCounterDown()
-        // speed test
         await runSpeedTest()
     }
     
-    private func arrangeNextTimer() {
-        restTime = Defaults[.testInterval].rawValue
-
-        let timer = Timer(timeInterval: TimeInterval(Defaults[.testInterval].rawValue), repeats: true, block: { [self] _ in
-            restTime = Defaults[.testInterval].rawValue
-            
-            Task {
-                await runSpeedTest()
-            }
-        })
-        
-        runLoop.add(timer, forMode: .common)
-        self.timer = timer
-    }
-    
     private func runSpeedTest() async {
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: Notification.Name.backgroundRunningTest, object: nil)
+        }
+        
         let log = DTLog()
         
         do {
@@ -75,31 +42,10 @@ class SpeedTestService {
         }
         
         log.interval = Defaults[.testInterval].rawValue
-        
-        // save log
-        save(log)
+
         // send notification
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: DTLog.newLog, object: self, userInfo: ["log":log])
-        }
-    }
-    
-    private func updateCounterDown() {
-        let updateTimer = Timer(timeInterval: 1, repeats: true) { [self] _ in
-            restTime -= 1
-            NotificationCenter.default.post(name: SpeedTestService.restTimeDidChanged, object: self, userInfo: ["restTime":restTime])
-        }
-        
-        runLoop.add(updateTimer, forMode: .common)
-        self.updateTimer = updateTimer
-    }
-    
-    private func save(_ log:DTLog) {
-        DispatchQueue.main.async {
-            let realm = try! Realm()
-            try! realm.write {
-                realm.add(log, update: .all)
-            }
+            NotificationCenter.default.post(name: Notification.Name.dtLogNewLog, object: self, userInfo: ["log":log])
         }
     }
     
@@ -138,22 +84,7 @@ class SpeedTestService {
         }
     }
     
-    func stop() {
-        timer?.invalidate()
-        updateTimer?.invalidate()
-        
-        NotificationCenter.default.post(name: SpeedTestService.restTimeDidChanged, object: self, userInfo: ["restTime":0])
-    }
-    
     func restart() async throws {
-        stop()
         try await start()
-    }
-    
-    func removeDatabase() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.deleteAll()
-        }
     }
 }

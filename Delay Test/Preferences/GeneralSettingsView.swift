@@ -31,8 +31,6 @@ struct GeneralSettingsView: View {
 }
 
 enum StatusBarStyle:String, CaseIterable, Identifiable, Defaults.Serializable {
-    static let didChanged = Notification.Name("didChanged")
-
     var id: String {
         return self.rawValue
     }

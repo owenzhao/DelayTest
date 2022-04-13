@@ -10,8 +10,6 @@ import Preferences
 import Defaults
 
 struct StatusBarSettingView: View {
-    static let settingsDidChanged = Notification.Name("settingsDidChanged")
-    
     @Default(.statusBarStyle) private var statusBarStyle
     @Default(.goodText) private var goodText
     @Default(.failText) private var failText
@@ -30,7 +28,7 @@ struct StatusBarSettingView: View {
                 }
                 .frame(width: 120)
                 .onChange(of: statusBarStyle) { _ in
-                    NotificationCenter.default.post(name: StatusBarStyle.didChanged, object: self)
+                    NotificationCenter.default.post(name: Notification.Name.statusBarStyleDidChanged, object: self)
                 }
                 
                 switch statusBarStyle {
@@ -43,7 +41,7 @@ struct StatusBarSettingView: View {
                             .cornerRadius(10)
                             .frame(width: 120)
                             .onChange(of: goodText) { _ in
-                                NotificationCenter.default.post(name: StatusBarSettingView.settingsDidChanged, object: self)
+                                NotificationCenter.default.post(name: Notification.Name.statusBarSettingsDidChanged, object: self)
                             }
                         
                         Picker(selection: $goodTextColor) {
@@ -56,7 +54,7 @@ struct StatusBarSettingView: View {
                         }
                         .frame(width: 120)
                         .onChange(of: goodTextColor) { _ in
-                            NotificationCenter.default.post(name: GoodColor.didChanged, object: self)
+                            NotificationCenter.default.post(name: Notification.Name.goodColorDidChanged, object: self)
                         }
                     }
                     
@@ -66,7 +64,7 @@ struct StatusBarSettingView: View {
                             .cornerRadius(10)
                             .frame(width: 120)
                             .onChange(of: goodText) { _ in
-                                NotificationCenter.default.post(name: StatusBarSettingView.settingsDidChanged, object: self)
+                                NotificationCenter.default.post(name: Notification.Name.statusBarSettingsDidChanged, object: self)
                             }
                         
                         Picker(selection: $failTextColor) {
@@ -79,7 +77,7 @@ struct StatusBarSettingView: View {
                         }
                         .frame(width: 120)
                         .onChange(of: failTextColor) { _ in
-                            NotificationCenter.default.post(name: FailColor.didChanged, object: self)
+                            NotificationCenter.default.post(name: Notification.Name.failColorDidChanged, object: self)
                         }
                     }
                 }
@@ -89,8 +87,6 @@ struct StatusBarSettingView: View {
 }
 
 enum GoodColor:String,CaseIterable,Identifiable, Defaults.Serializable {
-    static let didChanged = Notification.Name("didChanged")
-    
     var id: String {
         return self.rawValue
     }
@@ -165,8 +161,6 @@ enum GoodColor:String,CaseIterable,Identifiable, Defaults.Serializable {
 }
 
 enum FailColor:String,CaseIterable,Identifiable, Defaults.Serializable {
-    static let didChanged = Notification.Name("didChanged")
-    
     var id: String {
         return self.rawValue
     }

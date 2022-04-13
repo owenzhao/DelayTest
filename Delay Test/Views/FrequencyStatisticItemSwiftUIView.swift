@@ -9,36 +9,27 @@ import SwiftUI
 import RealmSwift
 
 struct FrequencyStatisticItemSwiftUIView: View {
-    @ObservedResults(DTLog.self) var logs
-    @Binding var frequencyStaticstics:FrequencyStaticstics
+    @State var title = ""
+    @State var goodInString = ""
+    @State var longestDisconnectedTimeString = ""
+    @State var longestAverageDisconnectedTimeString = ""
+    @State var totalDisconnectedTimeString = ""
     
     var body: some View {
         let columns:[GridItem] = Array(repeating: .init(.flexible()), count: 5)
         
         LazyVGrid(columns: columns) {
-            ForEach([10], id: \.self) { _ in
-                Text(String(showCount(frequencyStaticstics)))
-                Text(String(format:"%.1f%%", frequencyStaticstics.goodsIn(logs) * 100))
-                Text(String(frequencyStaticstics.getLDT()))
-                Text(String(frequencyStaticstics.getADT()))
-                Text(String(frequencyStaticstics.getTDT()))
-            }
+            Text(title)
+            Text(goodInString)
+            Text(longestDisconnectedTimeString)
+            Text(longestAverageDisconnectedTimeString)
+            Text(totalDisconnectedTimeString)
         }
-    }
-    
-    private func showCount(_ count:FrequencyStaticstics) -> String {
-        if count.count != count.max {
-            return "\(count.count)/\(count.max)"
-        }
-        
-        return "\(count.count)"
     }
 }
 
 struct StatisticItemSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        FrequencyStatisticItemSwiftUIView(frequencyStaticstics: .constant(FrequencyStaticstics(count: 10,
-                                                          max: 10,
-                                                          disconnectedTimePoints: [])))
+        FrequencyStatisticItemSwiftUIView()
     }
 }
