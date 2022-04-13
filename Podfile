@@ -6,8 +6,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Delay Test' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  pod 'RealmSwift'
 
-  # Pods for Delay Test
-  # pod 'RealmSwift'
+  # Pods for Delay Test  
 
 end

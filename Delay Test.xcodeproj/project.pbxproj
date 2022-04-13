@@ -42,10 +42,6 @@
 		DCCD4BCB277ADE1300F5EFF5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCD4BCA277ADE1300F5EFF5 /* Service.swift */; };
 		DCD6A9B027826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCD6A9AE27826CBF00F1C872 /* Delay-Test-Launcher-InfoPlist.strings */; };
 		DCDA4B512773BB7D001BB069 /* MouseRightClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */; };
-		DCF28C8A2784C0E4009604EB /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF28C882784C0E4009604EB /* RealmSwift.xcframework */; };
-		DCF28C8B2784C0E4009604EB /* RealmSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCF28C882784C0E4009604EB /* RealmSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DCF28C8C2784C0E4009604EB /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF28C892784C0E4009604EB /* Realm.xcframework */; };
-		DCF28C8D2784C0E4009604EB /* Realm.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCF28C892784C0E4009604EB /* Realm.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,8 +61,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DCF28C8B2784C0E4009604EB /* RealmSwift.xcframework in Embed Frameworks */,
-				DCF28C8D2784C0E4009604EB /* Realm.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,8 +105,6 @@
 		DCD6A9AD27826CB200F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		DCD6A9AF27826CBF00F1C872 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Delay-Test-Launcher-InfoPlist.strings"; sourceTree = "<group>"; };
 		DCDA4B502773BB7D001BB069 /* MouseRightClickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MouseRightClickView.swift; sourceTree = "<group>"; };
-		DCF28C882784C0E4009604EB /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = Frameworks/RealmSwift.xcframework; sourceTree = "<group>"; };
-		DCF28C892784C0E4009604EB /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Realm.xcframework; path = Frameworks/Realm.xcframework; sourceTree = "<group>"; };
 		FAC5E4280508DF8A4E928D6C /* Pods-Delay Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delay Test.debug.xcconfig"; path = "Target Support Files/Pods-Delay Test/Pods-Delay Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,11 +115,9 @@
 			files = (
 				DCAD4A4527D55CE50013EAE5 /* MyHost in Frameworks */,
 				DCA151912779975A00E2F1C6 /* Defaults in Frameworks */,
-				DCF28C8A2784C0E4009604EB /* RealmSwift.xcframework in Frameworks */,
 				DCA34A972773A32E00E1F1A3 /* MyAppStore in Frameworks */,
 				DCA62035278A168200A7343E /* Chinese24Jieqi in Frameworks */,
 				DC8DF2D8277E04BD00D2F4F3 /* ServiceManagement.framework in Frameworks */,
-				DCF28C8C2784C0E4009604EB /* Realm.xcframework in Frameworks */,
 				DC0F02822789FDB4001E33CB /* Chinese24Jieqi in Frameworks */,
 				DC94B04D2777C07E00BEE246 /* Preferences in Frameworks */,
 				7B2F1ACB1F6CED398F46148F /* Pods_Delay_Test.framework in Frameworks */,
@@ -149,8 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				DC54A80927D68DA600193A4D /* XCTest.framework */,
-				DCF28C892784C0E4009604EB /* Realm.xcframework */,
-				DCF28C882784C0E4009604EB /* RealmSwift.xcframework */,
 				DC8DF2D7277E04BD00D2F4F3 /* ServiceManagement.framework */,
 				05FA40D3E23EF4AA092EA443 /* Pods_Delay_Test.framework */,
 			);
@@ -280,6 +268,7 @@
 				DC1834A3276FB1B500D906BC /* Resources */,
 				DC8DF2D9277E04F300D2F4F3 /* CopyFiles */,
 				DCF28C8E2784C0E4009604EB /* Embed Frameworks */,
+				3328EEB6EBEE42A8E6107EBC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,11 +336,11 @@
 			);
 			mainGroup = DC18349C276FB1B500D906BC;
 			packageReferences = (
-				DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */,
-				DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */,
-				DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */,
-				DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */,
-				DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */,
+				DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore.git" */,
+				DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences.git" */,
+				DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults.git" */,
+				DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */,
+				DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost.git" */,
 			);
 			productRefGroup = DC1834A6276FB1B500D906BC /* Products */;
 			projectDirPath = "";
@@ -390,6 +379,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3328EEB6EBEE42A8E6107EBC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delay Test/Pods-Delay Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7DD06ABFF2EDA60EBE2B5283 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -766,7 +772,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */ = {
+		DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/Chinese-24-Jieqi.git";
 			requirement = {
@@ -774,7 +780,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */ = {
+		DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:sindresorhus/Preferences.git";
 			requirement = {
@@ -782,7 +788,7 @@
 				minimumVersion = 2.5.0;
 			};
 		};
-		DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+		DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:sindresorhus/Defaults.git";
 			requirement = {
@@ -790,7 +796,7 @@
 				minimumVersion = 6.1.0;
 			};
 		};
-		DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */ = {
+		DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/MyAppStore.git";
 			requirement = {
@@ -798,7 +804,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */ = {
+		DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/Chinese-24-Jieqi.git";
 			requirement = {
@@ -806,7 +812,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */ = {
+		DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:owenzhao/MyHost.git";
 			requirement = {
@@ -819,37 +825,37 @@
 /* Begin XCSwiftPackageProductDependency section */
 		DC0F02812789FDB4001E33CB /* Chinese24Jieqi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */;
+			package = DC0F02802789FDB4001E33CB /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */;
 			productName = Chinese24Jieqi;
 		};
 		DC8DF2D2277DC4FB00D2F4F3 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */;
+			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults.git" */;
 			productName = Defaults;
 		};
 		DC94B04C2777C07E00BEE246 /* Preferences */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences" */;
+			package = DC94B04B2777C07E00BEE246 /* XCRemoteSwiftPackageReference "Preferences.git" */;
 			productName = Preferences;
 		};
 		DCA151902779975A00E2F1C6 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults" */;
+			package = DCA1518F2779975A00E2F1C6 /* XCRemoteSwiftPackageReference "Defaults.git" */;
 			productName = Defaults;
 		};
 		DCA34A962773A32E00E1F1A3 /* MyAppStore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore" */;
+			package = DCA34A952773A32E00E1F1A3 /* XCRemoteSwiftPackageReference "MyAppStore.git" */;
 			productName = MyAppStore;
 		};
 		DCA62034278A168200A7343E /* Chinese24Jieqi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi" */;
+			package = DCA62033278A168200A7343E /* XCRemoteSwiftPackageReference "Chinese-24-Jieqi.git" */;
 			productName = Chinese24Jieqi;
 		};
 		DCAD4A4427D55CE50013EAE5 /* MyHost */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost" */;
+			package = DCAD4A4327D55CE50013EAE5 /* XCRemoteSwiftPackageReference "MyHost.git" */;
 			productName = MyHost;
 		};
 /* End XCSwiftPackageProductDependency section */
