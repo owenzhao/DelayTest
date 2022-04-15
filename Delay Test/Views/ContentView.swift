@@ -20,6 +20,7 @@ struct ContentView: View {
     }
     
     @Binding var service:SpeedTestService
+    @ObservedResults(DTLog.self, sortDescriptor: .init(keyPath: "startTime", ascending: false)) private var logs
     private let model = Model()
     
     @State private var window:NSWindow? = nil
@@ -32,12 +33,7 @@ struct ContentView: View {
     @Default(.stopButtonDisabled) private var stopButtonDisabled
     
     @State private var stasticalMethod = StatisticalMethod.duration
-    @ObservedObject private var countdownTimerModel = CountdownModel()
-    @State private var countdownTimer:Timer? = nil
-    private let runLoop = RunLoop.current
-    
     @State private var result = DTResult()
-    
     @State private var isShown = true
     
     private let newLogPublisher = NotificationCenter.default.publisher(for: Notification.Name.dtLogNewLog, object: nil)
@@ -110,14 +106,12 @@ struct ContentView: View {
                         stopButtonDisabled.toggle()
                         NotificationCenter.default.post(name: SpeedTestServiceNotification.stop, object: self)
                         
-                        stopCountdownTimer()
                         result = DTResult(state: .stop)
                     } label: {
                         Label("Stop", systemImage: "stop.fill")
                     }.disabled(stopButtonDisabled)
                     
-                    Text(String(countdownTimerModel.restTime))
-                        .font(Font.custom("Big Caslon", fixedSize: 18))
+                    TimerView(isShown: $isShown, service: $service, testInterval: $testInterval)
 
                     result.getText()
                     
@@ -166,7 +160,7 @@ struct ContentView: View {
                     ForEach([1,5,10,15,30,60,180,360,480,720,1440].map { getDurationStaticstics($0) }) { durationStatistics in
                         
 //                        TODO: - Workaround as the view is not auto updated as it should.
-                        if model.logs.isEmpty {
+                        if logs.isEmpty {
                             DrurationStaticsticsSwiftUIView(title: String(showDate(durationStatistics)),
                                                             goodInString: "0.0%",
                                                             longestDisconnectedTimeString: "0",
@@ -244,8 +238,6 @@ struct ContentView: View {
                 if let log = notification.userInfo?["log"] as? DTLog {
                     model.save(log)
                     self.result = DTResult(state: .result(log: log))
-                    
-                    startCountdownTimer()
                 }
             }
             .onReceive(runningTestPublisher, perform: { _ in
@@ -315,7 +307,7 @@ struct ContentView: View {
     private func getDateString() -> String {
         let jieqi = Jieqi()
         
-        if let log = model.logs.first {
+        if let log = logs.first {
             return jieqi.xinwenlianboDateString(log.startTime)
         }
         
@@ -327,11 +319,11 @@ struct ContentView: View {
     }
     
     private func getFrequencyStaticstics(_ count:Int) -> FrequencyStaticsticsToNow {
-        return FrequencyStaticsticsToNow(count: count, logs: model.logs)
+        return FrequencyStaticsticsToNow(count: count, logs: logs)
     }
     
     private func getDurationStaticstics(_ timeLength:Int) -> DurationStaticsticsToNow {
-        return DurationStaticsticsToNow(timeLength: timeLength, logs: model.logs)
+        return DurationStaticsticsToNow(timeLength: timeLength, logs: logs)
     }
     
     private func showDate(_ durationStatistics:DurationStaticsticsToNow) -> String {
@@ -352,7 +344,7 @@ struct ContentView: View {
     }
     
     private func updateDisconnectedTimePoints(in count:Int) -> [DisconnectedTimePoint] {
-        let logs = model.logs[0..<count]
+        let logs = logs[0..<count]
 
         return updateDisconnectedTimePoints(with:logs)
     }
@@ -360,7 +352,7 @@ struct ContentView: View {
     private func updateDisconnectedTimePoints(withIn timeLength:Int) -> [DisconnectedTimePoint] {
         let now = Date()
         let date = Date(timeInterval: -Double(timeLength * 60), since: now) as NSDate
-        let logs = model.logs.filter(NSPredicate(format: "startTime>%@", date))
+        let logs = logs.filter(NSPredicate(format: "startTime>%@", date))
         
         return updateDisconnectedTimePoints(with:logs[0..<logs.count])
     }
@@ -422,36 +414,6 @@ struct ContentView: View {
             return internetIPV6
         }
     }
-    
-    private func startCountdownTimer() {
-        if countdownTimer != nil {
-            stopCountdownTimer()
-        }
-        
-        countdownTimerModel.restTime = testInterval.rawValue
-        
-        let updateTimer = Timer(timeInterval: 1, repeats: true) { [self] _ in
-            if countdownTimerModel.restTime == 0 {
-                stopCountdownTimer()
-                
-                Task {
-                    try await service.restart()
-                }
-            } else if isShown {
-                countdownTimerModel.restTime -= 1
-            }
-        }
-        
-        runLoop.add(updateTimer, forMode: .common)
-        countdownTimer = updateTimer
-    }
-    
-    private func stopCountdownTimer() {
-        countdownTimer?.invalidate()
-        countdownTimer = nil
-        
-        countdownTimerModel.restTime = 0
-    }
 }
 
 enum StatisticalMethod:String, CaseIterable, Identifiable, DefaultsSerializable {
@@ -510,10 +472,6 @@ enum StatisticalMethod:String, CaseIterable, Identifiable, DefaultsSerializable 
     enum DurationStep {
         
     }
-}
-
-class CountdownModel:ObservableObject {
-    @Published var restTime = 0
 }
 
 struct ContentView_Previews: PreviewProvider {

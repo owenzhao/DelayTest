@@ -30,6 +30,7 @@
 		DC8DF2DA277E053D00D2F4F3 /* Delay Test Launcher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = DC8DF2C1277C7F4F00D2F4F3 /* Delay Test Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DC94B04D2777C07E00BEE246 /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = DC94B04C2777C07E00BEE246 /* Preferences */; };
 		DC94B04F2777C0C700BEE246 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC94B04E2777C0C700BEE246 /* GeneralSettingsView.swift */; };
+		DC96823428097EE700EE92E9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC96823328097EE700EE92E9 /* TimerView.swift */; };
 		DCA1518E2778E0E400E2F1C6 /* StatusBarSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1518D2778E0E400E2F1C6 /* StatusBarSettingView.swift */; };
 		DCA151912779975A00E2F1C6 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = DCA151902779975A00E2F1C6 /* Defaults */; };
 		DCA1519327799DEB00E2F1C6 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1519227799DEB00E2F1C6 /* DefaultsKeys.swift */; };
@@ -97,6 +98,7 @@
 		DC8DF2D7277E04BD00D2F4F3 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		DC8DF2DB277E059000D2F4F3 /* Delay-Test-Launcher-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Delay-Test-Launcher-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DC94B04E2777C0C700BEE246 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+		DC96823328097EE700EE92E9 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		DCA1518D2778E0E400E2F1C6 /* StatusBarSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarSettingView.swift; sourceTree = "<group>"; };
 		DCA1519227799DEB00E2F1C6 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		DCA34A8C27739FC500E1F1A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				DC0074A02773215500134077 /* DurationStaticsticsSwiftUIView.swift */,
 				DC2CCA6A2772ADCF00558B4F /* FrequencyStatisticItemSwiftUIView.swift */,
 				DC1834AA276FB1B500D906BC /* ContentView.swift */,
+				DC96823328097EE700EE92E9 /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				DC0074AA277395C500134077 /* URLSession+Extension.swift in Sources */,
 				DCA1518E2778E0E400E2F1C6 /* StatusBarSettingView.swift in Sources */,
 				DCA1519327799DEB00E2F1C6 /* DefaultsKeys.swift in Sources */,
+				DC96823428097EE700EE92E9 /* TimerView.swift in Sources */,
 				DC1834AB276FB1B500D906BC /* ContentView.swift in Sources */,
 				DC1834A9276FB1B500D906BC /* Delay_TestApp.swift in Sources */,
 				DCE2D6C52806A665006DBCB9 /* Defaults+WorkAround.swift in Sources */,
@@ -662,7 +666,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -674,7 +678,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -691,7 +695,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test/Delay_Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"Delay Test/Preview Content\"";
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -703,7 +707,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -719,7 +723,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -732,7 +736,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test-Launcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -749,7 +753,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Delay Test Launcher/Delay_Test_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 96NM39SGJ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -762,7 +766,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parussoft.Delay-Test-Launcher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

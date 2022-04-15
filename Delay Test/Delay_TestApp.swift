@@ -161,6 +161,10 @@ struct Delay_TestApp: SwiftUI.App {
                     ).show()
                 }.keyboardShortcut(KeyEquivalent(","), modifiers: .command)
             }
+            
+            CommandGroup(replacing: .newItem) {
+                // one main window is enough
+            }
         }
         .windowToolbarStyle(.unified)
     }
