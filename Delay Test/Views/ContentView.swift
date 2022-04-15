@@ -151,10 +151,10 @@ struct ContentView: View {
                 case .frequency:
                     ForEach([10, 30, 50, 100, 500, 1000, 5000].map { getFrequencyStaticstics($0) }) { frequencyStaticstics in
                         FrequencyStatisticItemSwiftUIView(title: String(showCount(frequencyStaticstics)),
-                                                          goodInString: String(format:"%.1f%%", frequencyStaticstics.goodsIn() * 100),
-                                                          longestDisconnectedTimeString: String(frequencyStaticstics.getLDT()),
-                                                          longestAverageDisconnectedTimeString: String(frequencyStaticstics.getADT()),
-                                                          totalDisconnectedTimeString: String(frequencyStaticstics.getTDT()))
+                                                          goodInString: frequencyStaticstics.goodsInString(),
+                                                          longestDisconnectedTimeString: frequencyStaticstics.getLDTString(),
+                                                          longestAverageDisconnectedTimeString: frequencyStaticstics.getLDTString(),
+                                                          totalDisconnectedTimeString: frequencyStaticstics.getTDTString())
                     }
                 case .duration:
                     ForEach([1,5,10,15,30,60,180,360,480,720,1440].map { getDurationStaticstics($0) }) { durationStatistics in
@@ -162,16 +162,16 @@ struct ContentView: View {
 //                        TODO: - Workaround as the view is not auto updated as it should.
                         if logs.isEmpty {
                             DrurationStaticsticsSwiftUIView(title: String(showDate(durationStatistics)),
-                                                            goodInString: "0.0%",
+                                                            goodInString: NSLocalizedString("No Data", comment: ""),
                                                             longestDisconnectedTimeString: "0",
                                                             longestAverageDisconnectedTimeString: "0",
                                                             totalDisconnectedTimeString: "0")
                         } else {
                             DrurationStaticsticsSwiftUIView(title: String(showDate(durationStatistics)),
-                                                            goodInString: String(format:"%.1f%%", durationStatistics.goodsIn() * 100),
-                                                            longestDisconnectedTimeString: String(durationStatistics.getLDT()),
-                                                            longestAverageDisconnectedTimeString: String(durationStatistics.getADT()),
-                                                            totalDisconnectedTimeString: String(durationStatistics.getTDT()))
+                                                            goodInString: durationStatistics.goodsInString(),
+                                                            longestDisconnectedTimeString: durationStatistics.getLDTString(),
+                                                            longestAverageDisconnectedTimeString: durationStatistics.getLDTString(),
+                                                            totalDisconnectedTimeString: durationStatistics.getTDTString())
                         }
                         
                     }

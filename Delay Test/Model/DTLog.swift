@@ -72,34 +72,33 @@ protocol StaticsticsMethodHelper {
     var disconnectedTimePoints:[DisconnectedTimePoint] { get set }
     var logs:Slice<Results<DTLog>>? { get set }
     
-    func goodsIn() -> Double
-    func getLDT() -> Int
-    func getADT() -> Int
-    func getTDT() -> Int
+    func goodsInString() -> String
+    func getLDTString() -> String
+    func getADTString() -> String
+    func getTDTString() -> String
 }
 
 extension StaticsticsMethodHelper {
-    func goodsIn() -> Double {
-        guard let logs = logs else {
-            return 0
-        }
+    func goodsInString() -> String {
+        var result = ""
 
-        if logs.isEmpty {
-            return 0
+        if logs == nil || logs!.isEmpty {
+            result = NSLocalizedString("No Data", comment: "")
+        } else {
+            let goodsIn = logs!.filter { $0.connected }
+            result = String(format:"%.1f%%", Double(goodsIn.count) / Double(logs!.count) * 100)
         }
         
-        let goodsIn = logs.filter { $0.connected }
-        
-        return Double(goodsIn.count) / Double(logs.count)
+        return result
     }
     
-    func getLDT() -> Int { // in seconds
+    func getLDTString() -> String { // in seconds
         let LDT = disconnectedTimePoints.max(by: { $0.timeLength < $1.timeLength })?.timeLength ?? 0
         
-        return Int(LDT)
+        return String(Int(LDT))
     }
     
-    func getADT() -> Int {
+    func getADTString() -> String {
         let ADT:Int = {
             if disconnectedTimePoints.isEmpty {
                 return 0
@@ -108,10 +107,14 @@ extension StaticsticsMethodHelper {
             }
         }()
         
-        return ADT
+        return String(ADT)
     }
     
-    func getTDT() -> Int {
+    func getTDTString() -> String {
+        return String(getTDT())
+    }
+    
+    private func getTDT() -> Int {
         let TDT = disconnectedTimePoints.reduce(0) { partialResult, disconnectedTimePoint in
             partialResult + disconnectedTimePoint.timeLength
         }
